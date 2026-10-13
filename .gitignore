@@ -1,0 +1,32 @@
+
+# ROS 2 / colcon
+/build/
+/install/
+/log/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# C++ / CMake
+CMakeCache.txt
+CMakeFiles/
+compile_commands.json
+
+# IDE
+.idea/
+.vscode/
+
+# Simulation / datasets
+*.db3
+*.mcap
+rosbag2_*/
+datasets/
+checkpoints/
+outputs/
+
+# OS
+.DS_Store
+
