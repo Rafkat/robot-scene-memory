@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite
   name="robot_scene_sensors.uncrustify"
-  tests="6"
+  tests="10"
   failures="0"
   errors="0"
-  time="0.023"
+  time="0.027"
 >
+  <testcase
+    name="include/robot_scene_sensors/lidar_clustering.hpp"
+    classname="robot_scene_sensors.uncrustify"/>
   <testcase
     name="include/robot_scene_sensors/lidar_geometry.hpp"
     classname="robot_scene_sensors.uncrustify"/>
   <testcase
+    name="install/robot_scene_sensors/include/robot_scene_sensors/lidar_clustering.hpp"
+    classname="robot_scene_sensors.uncrustify"/>
+  <testcase
     name="install/robot_scene_sensors/include/robot_scene_sensors/lidar_geometry.hpp"
+    classname="robot_scene_sensors.uncrustify"/>
+  <testcase
+    name="src/lidar_clustering.cpp"
     classname="robot_scene_sensors.uncrustify"/>
   <testcase
     name="src/lidar_geometry.cpp"
@@ -22,13 +31,20 @@
     name="src/sensor_node.cpp"
     classname="robot_scene_sensors.uncrustify"/>
   <testcase
+    name="test/test_lidar_clustering.cpp"
+    classname="robot_scene_sensors.uncrustify"/>
+  <testcase
     name="test/test_lidar_geometry.cpp"
     classname="robot_scene_sensors.uncrustify"/>
   <system-out>Checked files:
+* include/robot_scene_sensors/lidar_clustering.hpp
 * include/robot_scene_sensors/lidar_geometry.hpp
+* install/robot_scene_sensors/include/robot_scene_sensors/lidar_clustering.hpp
 * install/robot_scene_sensors/include/robot_scene_sensors/lidar_geometry.hpp
+* src/lidar_clustering.cpp
 * src/lidar_geometry.cpp
 * src/lidar_processor.cpp
 * src/sensor_node.cpp
+* test/test_lidar_clustering.cpp
 * test/test_lidar_geometry.cpp</system-out>
 </testsuite>

@@ -1,8 +1,8 @@
 
 # ROS 2 / colcon
-/build/
-/install/
-/log/
+build/
+install/
+log/
 
 # Python
 __pycache__/

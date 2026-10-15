@@ -211,6 +211,19 @@ lidar_geometry/fast:
 .PHONY : lidar_geometry/fast
 
 #=============================================================================
+# Target rules for targets named lidar_clustering
+
+# Build rule for target.
+lidar_clustering: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lidar_clustering
+.PHONY : lidar_clustering
+
+# fast build rule for target.
+lidar_clustering/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_clustering.dir/build.make CMakeFiles/lidar_clustering.dir/build
+.PHONY : lidar_clustering/fast
+
+#=============================================================================
 # Target rules for targets named sensor_node
 
 # Build rule for target.
@@ -250,6 +263,19 @@ test_lidar_geometry/fast:
 .PHONY : test_lidar_geometry/fast
 
 #=============================================================================
+# Target rules for targets named test_lidar_clustering
+
+# Build rule for target.
+test_lidar_clustering: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_lidar_clustering
+.PHONY : test_lidar_clustering
+
+# fast build rule for target.
+test_lidar_clustering/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lidar_clustering.dir/build.make CMakeFiles/test_lidar_clustering.dir/build
+.PHONY : test_lidar_clustering/fast
+
+#=============================================================================
 # Target rules for targets named gtest
 
 # Build rule for target.
@@ -274,6 +300,30 @@ gtest_main: cmake_check_build_system
 gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
+
+src/lidar_clustering.o: src/lidar_clustering.cpp.o
+.PHONY : src/lidar_clustering.o
+
+# target to build an object file
+src/lidar_clustering.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_clustering.dir/build.make CMakeFiles/lidar_clustering.dir/src/lidar_clustering.cpp.o
+.PHONY : src/lidar_clustering.cpp.o
+
+src/lidar_clustering.i: src/lidar_clustering.cpp.i
+.PHONY : src/lidar_clustering.i
+
+# target to preprocess a source file
+src/lidar_clustering.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_clustering.dir/build.make CMakeFiles/lidar_clustering.dir/src/lidar_clustering.cpp.i
+.PHONY : src/lidar_clustering.cpp.i
+
+src/lidar_clustering.s: src/lidar_clustering.cpp.s
+.PHONY : src/lidar_clustering.s
+
+# target to generate assembly for a file
+src/lidar_clustering.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar_clustering.dir/build.make CMakeFiles/lidar_clustering.dir/src/lidar_clustering.cpp.s
+.PHONY : src/lidar_clustering.cpp.s
 
 src/lidar_geometry.o: src/lidar_geometry.cpp.o
 .PHONY : src/lidar_geometry.o
@@ -347,6 +397,30 @@ src/sensor_node.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_node.dir/build.make CMakeFiles/sensor_node.dir/src/sensor_node.cpp.s
 .PHONY : src/sensor_node.cpp.s
 
+test/test_lidar_clustering.o: test/test_lidar_clustering.cpp.o
+.PHONY : test/test_lidar_clustering.o
+
+# target to build an object file
+test/test_lidar_clustering.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lidar_clustering.dir/build.make CMakeFiles/test_lidar_clustering.dir/test/test_lidar_clustering.cpp.o
+.PHONY : test/test_lidar_clustering.cpp.o
+
+test/test_lidar_clustering.i: test/test_lidar_clustering.cpp.i
+.PHONY : test/test_lidar_clustering.i
+
+# target to preprocess a source file
+test/test_lidar_clustering.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lidar_clustering.dir/build.make CMakeFiles/test_lidar_clustering.dir/test/test_lidar_clustering.cpp.i
+.PHONY : test/test_lidar_clustering.cpp.i
+
+test/test_lidar_clustering.s: test/test_lidar_clustering.cpp.s
+.PHONY : test/test_lidar_clustering.s
+
+# target to generate assembly for a file
+test/test_lidar_clustering.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_lidar_clustering.dir/build.make CMakeFiles/test_lidar_clustering.dir/test/test_lidar_clustering.cpp.s
+.PHONY : test/test_lidar_clustering.cpp.s
+
 test/test_lidar_geometry.o: test/test_lidar_geometry.cpp.o
 .PHONY : test/test_lidar_geometry.o
 
@@ -388,10 +462,15 @@ help:
 	@echo "... uninstall"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... lidar_clustering"
 	@echo "... lidar_geometry"
 	@echo "... lidar_processor"
 	@echo "... sensor_node"
+	@echo "... test_lidar_clustering"
 	@echo "... test_lidar_geometry"
+	@echo "... src/lidar_clustering.o"
+	@echo "... src/lidar_clustering.i"
+	@echo "... src/lidar_clustering.s"
 	@echo "... src/lidar_geometry.o"
 	@echo "... src/lidar_geometry.i"
 	@echo "... src/lidar_geometry.s"
@@ -401,6 +480,9 @@ help:
 	@echo "... src/sensor_node.o"
 	@echo "... src/sensor_node.i"
 	@echo "... src/sensor_node.s"
+	@echo "... test/test_lidar_clustering.o"
+	@echo "... test/test_lidar_clustering.i"
+	@echo "... test/test_lidar_clustering.s"
 	@echo "... test/test_lidar_geometry.o"
 	@echo "... test/test_lidar_geometry.i"
 	@echo "... test/test_lidar_geometry.s"

@@ -1,0 +1,1 @@
+/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/include/robot_scene_sensors/lidar_clustering.hpp

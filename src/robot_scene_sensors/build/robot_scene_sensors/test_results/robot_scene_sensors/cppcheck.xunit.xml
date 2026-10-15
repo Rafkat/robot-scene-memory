@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite
   name="robot_scene_sensors.cppcheck"
-  tests="6"
+  tests="10"
   errors="0"
   failures="0"
-  time="0.001"
-  skipped="6"
+  time="0.003"
+  skipped="10"
 >
+  <testcase
+    name="include/robot_scene_sensors/lidar_clustering.hpp"
+    classname="robot_scene_sensors.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
   <testcase
     name="include/robot_scene_sensors/lidar_geometry.hpp"
     classname="robot_scene_sensors.cppcheck"
@@ -16,7 +24,23 @@
     </skipped>
   </testcase>
   <testcase
+    name="install/robot_scene_sensors/include/robot_scene_sensors/lidar_clustering.hpp"
+    classname="robot_scene_sensors.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
     name="install/robot_scene_sensors/include/robot_scene_sensors/lidar_geometry.hpp"
+    classname="robot_scene_sensors.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="src/lidar_clustering.cpp"
     classname="robot_scene_sensors.cppcheck"
   >
     <skipped type="skip" message="">
@@ -41,6 +65,14 @@
   </testcase>
   <testcase
     name="src/sensor_node.cpp"
+    classname="robot_scene_sensors.cppcheck"
+  >
+    <skipped type="skip" message="">
+      ![CDATA[Test Skipped due to cppcheck 2.13.0 performance issues]]
+    </skipped>
+  </testcase>
+  <testcase
+    name="test/test_lidar_clustering.cpp"
     classname="robot_scene_sensors.cppcheck"
   >
     <skipped type="skip" message="">

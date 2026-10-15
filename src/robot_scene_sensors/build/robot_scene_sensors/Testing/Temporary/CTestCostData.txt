@@ -1,8 +1,9 @@
-test_lidar_geometry 3 0.0237738
-cppcheck 3 0.0563793
-lint_cmake 1 0.154688
-uncrustify 3 0.0690654
-xmllint 3 0.49735
-flake8 2 0.223567
-pep257 2 0.145343
+test_lidar_geometry 7 0.0101333
+cppcheck 7 0.0273783
+lint_cmake 5 0.0314286
+uncrustify 6 0.033543
+xmllint 7 0.101274
+flake8 6 0.0757191
+pep257 6 0.0485292
+test_lidar_clustering 1 0.0750212
 ---
