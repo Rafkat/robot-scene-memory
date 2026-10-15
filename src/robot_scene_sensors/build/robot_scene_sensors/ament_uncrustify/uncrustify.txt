@@ -1,0 +1,20 @@
+-- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':
+ - /opt/ros/jazzy/bin/ament_uncrustify --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/uncrustify.xunit.xml
+
+No code style divergence in file 'include/robot_scene_sensors/lidar_geometry.hpp'
+
+No code style divergence in file 'install/robot_scene_sensors/include/robot_scene_sensors/lidar_geometry.hpp'
+
+No code style divergence in file 'src/lidar_geometry.cpp'
+
+No code style divergence in file 'src/lidar_processor.cpp'
+
+No code style divergence in file 'src/sensor_node.cpp'
+
+No code style divergence in file 'test/test_lidar_geometry.cpp'
+
+No problems found
+
+
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/uncrustify.xunit.xml'

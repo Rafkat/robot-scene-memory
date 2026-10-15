@@ -1,0 +1,158 @@
+[0.026s] Invoking command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors': AMENT_PREFIX_PATH=/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process
+[0.034s] UpdateCTestConfiguration  from :/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/CTestConfiguration.ini
+[0.035s] Parse Config file:/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/CTestConfiguration.ini
+[0.035s]    Site: rafkat-server
+[0.035s]    Build name: (empty)
+[0.035s]  Add coverage exclude regular expressions.
+[0.036s] Create new tag: 20261015-1336 - Experimental
+[0.036s] UpdateCTestConfiguration  from :/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/CTestConfiguration.ini
+[0.036s] Parse Config file:/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/CTestConfiguration.ini
+[0.036s] Test project /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors
+[0.036s] Constructing a list of tests
+[0.037s] Done constructing a list of tests
+[0.037s] Updating test list for fixtures
+[0.037s] Added 0 tests to meet fixture requirements
+[0.037s] Checking test dependency graph...
+[0.037s] Checking test dependency graph end
+[0.038s] test 1
+[0.038s]     Start 1: test_lidar_geometry
+[0.038s] 
+[0.038s] 1: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/test_lidar_geometry.gtest.xml" "--package-name" "robot_scene_sensors" "--output-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/ament_cmake_gtest/test_lidar_geometry.txt" "--command" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_lidar_geometry" "--gtest_output=xml:/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/test_lidar_geometry.gtest.xml"
+[0.039s] 1: Working Directory: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors
+[0.039s] 1: Test timeout computed to be: 60
+[0.096s] 1: -- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors':
+[0.096s] 1:  - /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_lidar_geometry --gtest_output=xml:/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/test_lidar_geometry.gtest.xml
+[0.098s] 1: Running main() from /opt/ros/jazzy/src/gtest_vendor/src/gtest_main.cc
+[0.098s] 1: [==========] Running 4 tests from 1 test suite.
+[0.098s] 1: [----------] Global test environment set-up.
+[0.099s] 1: [----------] 4 tests from LidarGeometry
+[0.099s] 1: [ RUN      ] LidarGeometry.ZeroAngle
+[0.099s] 1: [       OK ] LidarGeometry.ZeroAngle (0 ms)
+[0.100s] 1: [ RUN      ] LidarGeometry.NinetyDegrees
+[0.100s] 1: [       OK ] LidarGeometry.NinetyDegrees (0 ms)
+[0.100s] 1: [ RUN      ] LidarGeometry.InvalidRanges
+[0.100s] 1: [       OK ] LidarGeometry.InvalidRanges (0 ms)
+[0.101s] 1: [ RUN      ] LidarGeometry.AngleIncrement
+[0.101s] 1: [       OK ] LidarGeometry.AngleIncrement (0 ms)
+[0.101s] 1: [----------] 4 tests from LidarGeometry (0 ms total)
+[0.102s] 1: 
+[0.102s] 1: [----------] Global test environment tear-down
+[0.102s] 1: [==========] 4 tests from 1 test suite ran. (0 ms total)
+[0.102s] 1: [  PASSED  ] 4 tests.
+[0.103s] 1: -- run_test.py: return code 0
+[0.103s] 1: -- run_test.py: inject classname prefix into gtest result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/test_lidar_geometry.gtest.xml'
+[0.103s] 1: -- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/test_lidar_geometry.gtest.xml'
+[0.107s] 1/7 Test #1: test_lidar_geometry ..............   Passed    0.07 sec
+[0.108s] test 2
+[0.108s]     Start 2: cppcheck
+[0.108s] 
+[0.108s] 2: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/cppcheck.xunit.xml" "--package-name" "robot_scene_sensors" "--output-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/ament_cppcheck/cppcheck.txt" "--command" "/opt/ros/jazzy/bin/ament_cppcheck" "--xunit-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/cppcheck.xunit.xml" "--include_dirs" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/include"
+[0.109s] 2: Working Directory: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors
+[0.109s] 2: Test timeout computed to be: 300
+[0.169s] 2: -- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':
+[0.169s] 2:  - /opt/ros/jazzy/bin/ament_cppcheck --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/cppcheck.xunit.xml --include_dirs /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/include
+[0.253s] 2: cppcheck 2.13.0 has known performance issues and therefore will not be used, set the AMENT_CPPCHECK_ALLOW_SLOW_VERSIONS environment variable to override this.
+[0.267s] 2: -- run_test.py: return code 0
+[0.267s] 2: -- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/cppcheck.xunit.xml'
+[0.277s] 2/7 Test #2: cppcheck .........................   Passed    0.17 sec
+[0.277s] test 3
+[0.277s]     Start 3: flake8
+[0.278s] 
+[0.278s] 3: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/flake8.xunit.xml" "--package-name" "robot_scene_sensors" "--output-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/ament_flake8/flake8.txt" "--command" "/opt/ros/jazzy/bin/ament_flake8" "--xunit-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/flake8.xunit.xml"
+[0.278s] 3: Working Directory: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors
+[0.278s] 3: Test timeout computed to be: 60
+[0.348s] 3: -- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':
+[0.348s] 3:  - /opt/ros/jazzy/bin/ament_flake8 --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/flake8.xunit.xml
+[0.683s] 3: 
+[0.683s] 3: 2 files checked
+[0.683s] 3: No problems found
+[0.684s] 3: 
+[0.684s] 3: Checked files:
+[0.684s] 3: 
+[0.684s] 3: * ./install/_local_setup_util_ps1.py
+[0.685s] 3: * ./install/_local_setup_util_sh.py
+[0.715s] 3: -- run_test.py: return code 0
+[0.715s] 3: -- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/flake8.xunit.xml'
+[0.724s] 3/7 Test #3: flake8 ...........................   Passed    0.45 sec
+[0.725s] test 4
+[0.725s]     Start 4: lint_cmake
+[0.725s] 
+[0.725s] 4: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/lint_cmake.xunit.xml" "--package-name" "robot_scene_sensors" "--output-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/jazzy/bin/ament_lint_cmake" "--xunit-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/lint_cmake.xunit.xml"
+[0.726s] 4: Working Directory: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors
+[0.726s] 4: Test timeout computed to be: 60
+[0.784s] 4: -- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':
+[0.784s] 4:  - /opt/ros/jazzy/bin/ament_lint_cmake --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/lint_cmake.xunit.xml
+[0.858s] 4: 
+[0.859s] 4: No problems found
+[0.870s] 4: -- run_test.py: return code 0
+[0.870s] 4: -- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/lint_cmake.xunit.xml'
+[0.880s] 4/7 Test #4: lint_cmake .......................   Passed    0.15 sec
+[0.880s] test 5
+[0.880s]     Start 5: pep257
+[0.880s] 
+[0.880s] 5: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/pep257.xunit.xml" "--package-name" "robot_scene_sensors" "--output-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/ament_pep257/pep257.txt" "--command" "/opt/ros/jazzy/bin/ament_pep257" "--xunit-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/pep257.xunit.xml"
+[0.881s] 5: Working Directory: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors
+[0.881s] 5: Test timeout computed to be: 60
+[0.949s] 5: -- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':
+[0.949s] 5:  - /opt/ros/jazzy/bin/ament_pep257 --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/pep257.xunit.xml
+[1.143s] 5: checking ./install/_local_setup_util_ps1.py
+[1.143s] 5: checking ./install/_local_setup_util_sh.py
+[1.143s] 5: No problems found
+[1.161s] 5: -- run_test.py: return code 0
+[1.162s] 5: -- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/pep257.xunit.xml'
+[1.171s] 5/7 Test #5: pep257 ...........................   Passed    0.29 sec
+[1.171s] test 6
+[1.171s]     Start 6: uncrustify
+[1.171s] 
+[1.171s] 6: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/uncrustify.xunit.xml" "--package-name" "robot_scene_sensors" "--output-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/ament_uncrustify/uncrustify.txt" "--command" "/opt/ros/jazzy/bin/ament_uncrustify" "--xunit-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/uncrustify.xunit.xml"
+[1.171s] 6: Working Directory: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors
+[1.171s] 6: Test timeout computed to be: 60
+[1.242s] 6: -- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':
+[1.242s] 6:  - /opt/ros/jazzy/bin/ament_uncrustify --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/uncrustify.xunit.xml
+[1.357s] 6: No code style divergence in file 'include/robot_scene_sensors/lidar_geometry.hpp'
+[1.357s] 6: 
+[1.358s] 6: No code style divergence in file 'install/robot_scene_sensors/include/robot_scene_sensors/lidar_geometry.hpp'
+[1.358s] 6: 
+[1.358s] 6: No code style divergence in file 'src/lidar_geometry.cpp'
+[1.358s] 6: 
+[1.358s] 6: No code style divergence in file 'src/lidar_processor.cpp'
+[1.359s] 6: 
+[1.359s] 6: No code style divergence in file 'src/sensor_node.cpp'
+[1.359s] 6: 
+[1.359s] 6: No code style divergence in file 'test/test_lidar_geometry.cpp'
+[1.359s] 6: 
+[1.360s] 6: No problems found
+[1.369s] 6: -- run_test.py: return code 0
+[1.370s] 6: -- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/uncrustify.xunit.xml'
+[1.378s] 6/7 Test #6: uncrustify .......................   Passed    0.21 sec
+[1.379s] test 7
+[1.379s]     Start 7: xmllint
+[1.379s] 
+[1.379s] 7: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/xmllint.xunit.xml" "--package-name" "robot_scene_sensors" "--output-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/ament_xmllint/xmllint.txt" "--command" "/opt/ros/jazzy/bin/ament_xmllint" "--xunit-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/xmllint.xunit.xml"
+[1.379s] 7: Working Directory: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors
+[1.380s] 7: Test timeout computed to be: 60
+[1.438s] 7: -- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':
+[1.438s] 7:  - /opt/ros/jazzy/bin/ament_xmllint --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/xmllint.xunit.xml
+[2.831s] 7: File 'package.xml' is valid
+[2.831s] 7: 
+[2.832s] 7: File 'install/robot_scene_sensors/share/robot_scene_sensors/package.xml' is valid
+[2.832s] 7: 
+[2.832s] 7: No problems found
+[2.862s] 7: -- run_test.py: return code 0
+[2.862s] 7: -- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/xmllint.xunit.xml'
+[2.871s] 7/7 Test #7: xmllint ..........................   Passed    1.49 sec
+[2.872s] 
+[2.872s] [0;32m100% tests passed[0;0m, 0 tests failed[0;0m out of 7
+[2.872s] 
+[2.872s] Label Time Summary:
+[2.873s] cppcheck      =   0.17 sec*proc (1 test)
+[2.873s] flake8        =   0.45 sec*proc (1 test)
+[2.873s] gtest         =   0.07 sec*proc (1 test)
+[2.873s] lint_cmake    =   0.15 sec*proc (1 test)
+[2.873s] linter        =   2.76 sec*proc (6 tests)
+[2.874s] pep257        =   0.29 sec*proc (1 test)
+[2.874s] uncrustify    =   0.21 sec*proc (1 test)
+[2.874s] xmllint       =   1.49 sec*proc (1 test)
+[2.874s] 
+[2.875s] Total Test time (real) =   2.84 sec
+[2.882s] Invoked command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors' returned '0': AMENT_PREFIX_PATH=/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/ctest -C Release -D ExperimentalTest --no-compress-output -V --force-new-ctest-process

@@ -1,0 +1,15 @@
+-- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':
+ - /opt/ros/jazzy/bin/ament_flake8 --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/flake8.xunit.xml
+
+
+2 files checked
+No problems found
+
+Checked files:
+
+* ./install/_local_setup_util_ps1.py
+* ./install/_local_setup_util_sh.py
+
+
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/flake8.xunit.xml'

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+  name="robot_scene_sensors.xmllint"
+  tests="2"
+  errors="0"
+  failures="0"
+  time="1.318"
+>
+  <testcase
+    name="package.xml"
+    classname="robot_scene_sensors.xmllint"/>
+  <testcase
+    name="install/robot_scene_sensors/share/robot_scene_sensors/package.xml"
+    classname="robot_scene_sensors.xmllint"/>
+  <system-out>Checked files:
+* package.xml
+* install/robot_scene_sensors/share/robot_scene_sensors/package.xml</system-out>
+</testsuite>

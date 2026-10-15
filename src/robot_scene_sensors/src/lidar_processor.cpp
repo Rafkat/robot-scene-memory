@@ -1,4 +1,3 @@
-
 #include <algorithm>
 #include <cmath>
 #include <memory>
@@ -13,63 +12,65 @@ using robot_scene_sensors::polar_to_cartesian;
 
 class LidarProcessor : public rclcpp::Node {
 public:
-    LidarProcessor()
-        : Node("lidar_processor") {
+  LidarProcessor()
+  : Node("lidar_processor")
+  {
 
-        subscription_ =
-            create_subscription<sensor_msgs::msg::LaserScan>(
+    subscription_ =
+      create_subscription<sensor_msgs::msg::LaserScan>(
                 "/scan",
                 rclcpp::SensorDataQoS(),
-                [this](sensor_msgs::msg::LaserScan::ConstSharedPtr msg) {
-                    process_scan(*msg);
+      [this](sensor_msgs::msg::LaserScan::ConstSharedPtr msg) {
+        process_scan(*msg);
                 }
-            );
+      );
 
-        RCLCPP_INFO(
+    RCLCPP_INFO(
             get_logger(),
             "Lidar processor started"
-        );
-    }
+    );
+  }
 
 private:
-    void process_scan(
-        const sensor_msgs::msg::LaserScan& scan
-    ) {
-        ScanGeometry geometry{
-            scan.angle_min,
-            scan.angle_increment,
-            scan.range_min,
-            scan.range_max
-        };
+  void process_scan(
+    const sensor_msgs::msg::LaserScan & scan
+  )
+  {
+    ScanGeometry geometry{
+      scan.angle_min,
+      scan.angle_increment,
+      scan.range_min,
+      scan.range_max
+    };
 
-        const auto points = polar_to_cartesian(
+    const auto points = polar_to_cartesian(
             scan.ranges,
             geometry
-        );
+    );
 
-        if (points.empty()) {
-            RCLCPP_WARN(
+    if (points.empty()) {
+      RCLCPP_WARN(
                 get_logger(),
                 "No valid LiDAR points"
-            );
-            return;
-        }
+      );
+      return;
+    }
 
-        const auto closest = std::min_element(
+    const auto closest = std::min_element(
             points.begin(),
             points.end(),
-            [](const auto& a, const auto& b) {
-                return std::hypot(a.x, a.y) <
-                       std::hypot(b.x, b.y);
+      [](const auto & a, const auto & b) {
+        return std::hypot(a.x, a.y) <
+               std::hypot(b.x, b.y);
             }
-        );
+    );
 
-        const float distance = std::hypot(
+    const float distance = std::hypot(
             closest->x,
             closest->y
-        );
+    );
 
-        RCLCPP_INFO_THROTTLE(
+    RCLCPP_INFO_THROTTLE(
             get_logger(),
             *get_clock(),
             1000,
@@ -79,21 +80,21 @@ private:
             distance,
             closest->x,
             closest->y
-        );
-    }
+    );
+  }
 
-    rclcpp::Subscription<
-        sensor_msgs::msg::LaserScan
-    >::SharedPtr subscription_;
+  rclcpp::Subscription<
+    sensor_msgs::msg::LaserScan
+  >::SharedPtr subscription_;
 };
 
-int main(int argc, char** argv) {
-    rclcpp::init(argc, argv);
+int main(int argc, char ** argv)
+{
+  rclcpp::init(argc, argv);
 
-    auto node = std::make_shared<LidarProcessor>();
-    rclcpp::spin(node);
+  auto node = std::make_shared<LidarProcessor>();
+  rclcpp::spin(node);
 
-    rclcpp::shutdown();
-    return 0;
+  rclcpp::shutdown();
+  return 0;
 }
-

@@ -1,0 +1,166 @@
+[0.000000] (-) TimerEvent: {}
+[0.000833] (robot_scene_sensors) JobQueued: {'identifier': 'robot_scene_sensors', 'dependencies': OrderedDict()}
+[0.000967] (robot_scene_sensors) JobStarted: {'identifier': 'robot_scene_sensors'}
+[0.009255] (robot_scene_sensors) JobProgress: {'identifier': 'robot_scene_sensors', 'progress': 'cmake'}
+[0.009995] (robot_scene_sensors) JobProgress: {'identifier': 'robot_scene_sensors', 'progress': 'build'}
+[0.010682] (robot_scene_sensors) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors', '--', '-j12', '-l12'], 'cwd': '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors', 'env': OrderedDict({'TERM_SESSION_ID': 'cc83d716-6102-41ba-97e3-fb90db5ab279', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'rafkat', 'SSH_CLIENT': '192.168.10.103 53072 22', 'FONTCONFIG_PATH': '/home/rafkat/.cache/JetBrains/CLion2026.2/tmp/jbrd-fontconfig-8496559929327252061', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'INTELLIJ_ORIGINAL_ENV_REMOTE_DEV_NON_INTERACTIVE': '', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/rafkat/.cache/JetBrains/CLion2026.2/tmp/remote-dev-browser.sh', 'HOME': '/home/rafkat', 'OLDPWD': '/home/rafkat/my_projects/robot-scene-memory', 'SSH_TTY': '/dev/pts/0', 'TERMINAL_EMULATOR': 'JetBrains-JediTerm', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'REMOTE_DEV_SERVER_IS_NATIVE_LAUNCHER': '1', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'INTELLIJ_ORIGINAL_ENV_FONTCONFIG_PATH': '', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rafkat', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'REMOTE_DEV_LAUNCHER_NAME_FOR_USAGE': 'remote-dev-server.sh', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '49', 'PATH': '/home/rafkat/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/rafkat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/rafkat/.platformio/penv/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'FIG_TERM': '1', 'SSH_AUTH_SOCK': '/tmp/saf367bda53-fbdb-464e-9c3e-f2d33376cbb3', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'REMOTE_DEV_NON_INTERACTIVE': '1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors', 'PROCESS_LAUNCHED_BY_CW': '1', 'INTELLIJ_TERMINAL_COMMAND_BLOCKS_REWORKED': '1', 'IDEA_RESTART_VIA_EXIT_CODE': '88', 'SSH_CONNECTION': '192.168.10.103 53072 192.168.10.109 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'PROCESS_LAUNCHED_BY_Q': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.049159] (robot_scene_sensors) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099639] (-) TimerEvent: {}
+[0.199901] (-) TimerEvent: {}
+[0.300285] (-) TimerEvent: {}
+[0.363250] (robot_scene_sensors) StdoutLine: {'line': b'-- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.400413] (-) TimerEvent: {}
+[0.413812] (robot_scene_sensors) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.424132] (robot_scene_sensors) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.436745] (robot_scene_sensors) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.451827] (robot_scene_sensors) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.500528] (-) TimerEvent: {}
+[0.523397] (robot_scene_sensors) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.524720] (robot_scene_sensors) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.600636] (-) TimerEvent: {}
+[0.605860] (robot_scene_sensors) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.683735] (robot_scene_sensors) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[0.700738] (-) TimerEvent: {}
+[0.747350] (robot_scene_sensors) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[0.800844] (-) TimerEvent: {}
+[0.854855] (robot_scene_sensors) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[0.881282] (robot_scene_sensors) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.881571] (robot_scene_sensors) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/include>\n'}
+[0.881781] (robot_scene_sensors) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.884361] (robot_scene_sensors) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[0.884595] (robot_scene_sensors) StdoutLine: {'line': b"-- Configured 'flake8' exclude dirs and/or files: \n"}
+[0.889698] (robot_scene_sensors) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.892492] (robot_scene_sensors) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[0.900928] (-) TimerEvent: {}
+[0.913033] (robot_scene_sensors) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[0.913363] (robot_scene_sensors) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[0.915888] (robot_scene_sensors) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.916814] (robot_scene_sensors) StdoutLine: {'line': b'-- Configuring done (0.9s)\n'}
+[0.939033] (robot_scene_sensors) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[0.947598] (robot_scene_sensors) StdoutLine: {'line': b'-- Build files have been written to: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors\n'}
+[1.001040] (-) TimerEvent: {}
+[1.005009] (robot_scene_sensors) StdoutLine: {'line': b'[ 33%] Built target gtest_main\n'}
+[1.005259] (robot_scene_sensors) StdoutLine: {'line': b'[ 33%] Built target gtest\n'}
+[1.014613] (robot_scene_sensors) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/sensor_node.dir/src/sensor_node.cpp.o\x1b[0m\n'}
+[1.015965] (robot_scene_sensors) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/lidar_geometry.dir/src/lidar_geometry.cpp.o\x1b[0m\n'}
+[1.101166] (-) TimerEvent: {}
+[1.201507] (-) TimerEvent: {}
+[1.278302] (robot_scene_sensors) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX static library liblidar_geometry.a\x1b[0m\n'}
+[1.301635] (-) TimerEvent: {}
+[1.347134] (robot_scene_sensors) StdoutLine: {'line': b'[ 58%] Built target lidar_geometry\n'}
+[1.390037] (robot_scene_sensors) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/lidar_processor.dir/src/lidar_processor.cpp.o\x1b[0m\n'}
+[1.390442] (robot_scene_sensors) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/test_lidar_geometry.dir/test/test_lidar_geometry.cpp.o\x1b[0m\n'}
+[1.401746] (-) TimerEvent: {}
+[1.502041] (-) TimerEvent: {}
+[1.602323] (-) TimerEvent: {}
+[1.702597] (-) TimerEvent: {}
+[1.802911] (-) TimerEvent: {}
+[1.903245] (-) TimerEvent: {}
+[2.003599] (-) TimerEvent: {}
+[2.103917] (-) TimerEvent: {}
+[2.204184] (-) TimerEvent: {}
+[2.304486] (-) TimerEvent: {}
+[2.404787] (-) TimerEvent: {}
+[2.464015] (robot_scene_sensors) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX executable test_lidar_geometry\x1b[0m\n'}
+[2.504907] (-) TimerEvent: {}
+[2.605342] (-) TimerEvent: {}
+[2.681038] (robot_scene_sensors) StdoutLine: {'line': b'[ 83%] Built target test_lidar_geometry\n'}
+[2.705447] (-) TimerEvent: {}
+[2.805781] (-) TimerEvent: {}
+[2.906160] (-) TimerEvent: {}
+[3.006623] (-) TimerEvent: {}
+[3.107081] (-) TimerEvent: {}
+[3.207502] (-) TimerEvent: {}
+[3.307828] (-) TimerEvent: {}
+[3.408202] (-) TimerEvent: {}
+[3.508561] (-) TimerEvent: {}
+[3.608948] (-) TimerEvent: {}
+[3.709346] (-) TimerEvent: {}
+[3.809774] (-) TimerEvent: {}
+[3.910164] (-) TimerEvent: {}
+[4.010526] (-) TimerEvent: {}
+[4.049256] (robot_scene_sensors) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking CXX executable sensor_node\x1b[0m\n'}
+[4.110643] (-) TimerEvent: {}
+[4.196545] (robot_scene_sensors) StdoutLine: {'line': b'[ 91%] Built target sensor_node\n'}
+[4.210753] (-) TimerEvent: {}
+[4.311094] (-) TimerEvent: {}
+[4.411459] (-) TimerEvent: {}
+[4.511830] (-) TimerEvent: {}
+[4.612202] (-) TimerEvent: {}
+[4.712578] (-) TimerEvent: {}
+[4.812963] (-) TimerEvent: {}
+[4.913356] (-) TimerEvent: {}
+[5.013725] (-) TimerEvent: {}
+[5.114100] (-) TimerEvent: {}
+[5.214488] (-) TimerEvent: {}
+[5.314859] (-) TimerEvent: {}
+[5.415229] (-) TimerEvent: {}
+[5.515603] (-) TimerEvent: {}
+[5.615978] (-) TimerEvent: {}
+[5.716368] (-) TimerEvent: {}
+[5.816742] (-) TimerEvent: {}
+[5.917107] (-) TimerEvent: {}
+[6.017500] (-) TimerEvent: {}
+[6.117879] (-) TimerEvent: {}
+[6.218252] (-) TimerEvent: {}
+[6.318604] (-) TimerEvent: {}
+[6.418968] (-) TimerEvent: {}
+[6.519348] (-) TimerEvent: {}
+[6.619714] (-) TimerEvent: {}
+[6.720072] (-) TimerEvent: {}
+[6.820437] (-) TimerEvent: {}
+[6.920788] (-) TimerEvent: {}
+[7.021161] (-) TimerEvent: {}
+[7.121516] (-) TimerEvent: {}
+[7.221870] (-) TimerEvent: {}
+[7.322220] (-) TimerEvent: {}
+[7.422581] (-) TimerEvent: {}
+[7.522932] (-) TimerEvent: {}
+[7.623317] (-) TimerEvent: {}
+[7.723675] (-) TimerEvent: {}
+[7.824029] (-) TimerEvent: {}
+[7.924394] (-) TimerEvent: {}
+[8.024749] (-) TimerEvent: {}
+[8.125138] (-) TimerEvent: {}
+[8.225529] (-) TimerEvent: {}
+[8.325809] (-) TimerEvent: {}
+[8.426198] (-) TimerEvent: {}
+[8.526579] (-) TimerEvent: {}
+[8.626998] (-) TimerEvent: {}
+[8.727404] (-) TimerEvent: {}
+[8.738842] (robot_scene_sensors) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable lidar_processor\x1b[0m\n'}
+[8.827534] (-) TimerEvent: {}
+[8.927927] (-) TimerEvent: {}
+[9.028340] (-) TimerEvent: {}
+[9.070144] (robot_scene_sensors) StdoutLine: {'line': b'[100%] Built target lidar_processor\n'}
+[9.089015] (robot_scene_sensors) CommandEnded: {'returncode': 0}
+[9.090034] (robot_scene_sensors) JobProgress: {'identifier': 'robot_scene_sensors', 'progress': 'install'}
+[9.110702] (robot_scene_sensors) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors'], 'cwd': '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors', 'env': OrderedDict({'TERM_SESSION_ID': 'cc83d716-6102-41ba-97e3-fb90db5ab279', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'rafkat', 'SSH_CLIENT': '192.168.10.103 53072 22', 'FONTCONFIG_PATH': '/home/rafkat/.cache/JetBrains/CLion2026.2/tmp/jbrd-fontconfig-8496559929327252061', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'INTELLIJ_ORIGINAL_ENV_REMOTE_DEV_NON_INTERACTIVE': '', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/rafkat/.cache/JetBrains/CLion2026.2/tmp/remote-dev-browser.sh', 'HOME': '/home/rafkat', 'OLDPWD': '/home/rafkat/my_projects/robot-scene-memory', 'SSH_TTY': '/dev/pts/0', 'TERMINAL_EMULATOR': 'JetBrains-JediTerm', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'REMOTE_DEV_SERVER_IS_NATIVE_LAUNCHER': '1', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'INTELLIJ_ORIGINAL_ENV_FONTCONFIG_PATH': '', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rafkat', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'REMOTE_DEV_LAUNCHER_NAME_FOR_USAGE': 'remote-dev-server.sh', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '49', 'PATH': '/home/rafkat/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/rafkat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/rafkat/.platformio/penv/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'FIG_TERM': '1', 'SSH_AUTH_SOCK': '/tmp/saf367bda53-fbdb-464e-9c3e-f2d33376cbb3', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'REMOTE_DEV_NON_INTERACTIVE': '1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors', 'PROCESS_LAUNCHED_BY_CW': '1', 'INTELLIJ_TERMINAL_COMMAND_BLOCKS_REWORKED': '1', 'IDEA_RESTART_VIA_EXIT_CODE': '88', 'SSH_CONNECTION': '192.168.10.103 53072 192.168.10.109 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'PROCESS_LAUNCHED_BY_Q': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[9.120828] (robot_scene_sensors) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[9.121224] (robot_scene_sensors) StdoutLine: {'line': b'-- Installing: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/lib/robot_scene_sensors/sensor_node\n'}
+[9.121527] (robot_scene_sensors) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/lib/robot_scene_sensors/sensor_node" to ""\n'}
+[9.121757] (robot_scene_sensors) StdoutLine: {'line': b'-- Installing: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/lib/robot_scene_sensors/lidar_processor\n'}
+[9.127484] (robot_scene_sensors) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/lib/robot_scene_sensors/lidar_processor" to ""\n'}
+[9.127773] (robot_scene_sensors) StdoutLine: {'line': b'-- Installing: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/lib/liblidar_geometry.a\n'}
+[9.128148] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/include\n'}
+[9.128492] (-) TimerEvent: {}
+[9.128679] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/include/robot_scene_sensors\n'}
+[9.129032] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/include/robot_scene_sensors/lidar_geometry.hpp\n'}
+[9.129270] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/ament_index/resource_index/package_run_dependencies/robot_scene_sensors\n'}
+[9.129512] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/ament_index/resource_index/parent_prefix_path/robot_scene_sensors\n'}
+[9.129717] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/environment/ament_prefix_path.sh\n'}
+[9.129918] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/environment/ament_prefix_path.dsv\n'}
+[9.130135] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/environment/path.sh\n'}
+[9.130390] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/environment/path.dsv\n'}
+[9.130660] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/local_setup.bash\n'}
+[9.130997] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/local_setup.sh\n'}
+[9.131322] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/local_setup.zsh\n'}
+[9.131427] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/local_setup.dsv\n'}
+[9.131526] (robot_scene_sensors) StdoutLine: {'line': b'-- Installing: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/package.dsv\n'}
+[9.131635] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/ament_index/resource_index/packages/robot_scene_sensors\n'}
+[9.131733] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/cmake/robot_scene_sensorsConfig.cmake\n'}
+[9.131828] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/cmake/robot_scene_sensorsConfig-version.cmake\n'}
+[9.131922] (robot_scene_sensors) StdoutLine: {'line': b'-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/package.xml\n'}
+[9.132508] (robot_scene_sensors) CommandEnded: {'returncode': 0}
+[9.148410] (robot_scene_sensors) JobEnded: {'identifier': 'robot_scene_sensors', 'rc': 0}
+[9.149102] (-) EventReactorShutdown: {}

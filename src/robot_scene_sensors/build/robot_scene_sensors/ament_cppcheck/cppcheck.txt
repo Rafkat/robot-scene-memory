@@ -1,0 +1,8 @@
+-- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':
+ - /opt/ros/jazzy/bin/ament_cppcheck --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/cppcheck.xunit.xml --include_dirs /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/include
+
+cppcheck 2.13.0 has known performance issues and therefore will not be used, set the AMENT_CPPCHECK_ALLOW_SLOW_VERSIONS environment variable to override this.
+
+
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/cppcheck.xunit.xml'

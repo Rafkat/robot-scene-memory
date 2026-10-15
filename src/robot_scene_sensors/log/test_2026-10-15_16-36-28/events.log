@@ -1,0 +1,191 @@
+[0.000000] (-) TimerEvent: {}
+[0.000426] (robot_scene_sensors) JobQueued: {'identifier': 'robot_scene_sensors', 'dependencies': OrderedDict({'robot_scene_sensors': '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors'})}
+[0.000574] (robot_scene_sensors) JobStarted: {'identifier': 'robot_scene_sensors'}
+[0.024473] (robot_scene_sensors) Command: {'cmd': ['/usr/bin/ctest', '-C', 'Release', '-D', 'ExperimentalTest', '--no-compress-output', '-V', '--force-new-ctest-process'], 'cwd': '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors', 'env': OrderedDict({'TERM_SESSION_ID': 'cc83d716-6102-41ba-97e3-fb90db5ab279', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'rafkat', 'SSH_CLIENT': '192.168.10.103 53072 22', 'FONTCONFIG_PATH': '/home/rafkat/.cache/JetBrains/CLion2026.2/tmp/jbrd-fontconfig-8496559929327252061', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'INTELLIJ_ORIGINAL_ENV_REMOTE_DEV_NON_INTERACTIVE': '', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/home/rafkat/.cache/JetBrains/CLion2026.2/tmp/remote-dev-browser.sh', 'HOME': '/home/rafkat', 'OLDPWD': '/home/rafkat/my_projects/robot-scene-memory', 'SSH_TTY': '/dev/pts/0', 'TERMINAL_EMULATOR': 'JetBrains-JediTerm', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'REMOTE_DEV_SERVER_IS_NATIVE_LAUNCHER': '1', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'INTELLIJ_ORIGINAL_ENV_FONTCONFIG_PATH': '', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'rafkat', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'REMOTE_DEV_LAUNCHER_NAME_FOR_USAGE': 'remote-dev-server.sh', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '49', 'PATH': '/home/rafkat/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/rafkat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/rafkat/.platformio/penv/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GDK_BACKEND': 'x11', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'FIG_TERM': '1', 'SSH_AUTH_SOCK': '/tmp/saf367bda53-fbdb-464e-9c3e-f2d33376cbb3', 'AMENT_PREFIX_PATH': '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'REMOTE_DEV_NON_INTERACTIVE': '1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors', 'PROCESS_LAUNCHED_BY_CW': '1', 'INTELLIJ_TERMINAL_COMMAND_BLOCKS_REWORKED': '1', 'IDEA_RESTART_VIA_EXIT_CODE': '88', 'SSH_CONNECTION': '192.168.10.103 53072 192.168.10.109 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'PROCESS_LAUNCHED_BY_Q': '1', 'CMAKE_PREFIX_PATH': '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[0.034574] (robot_scene_sensors) StdoutLine: {'line': b'UpdateCTestConfiguration  from :/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/CTestConfiguration.ini\n'}
+[0.034932] (robot_scene_sensors) StdoutLine: {'line': b'Parse Config file:/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/CTestConfiguration.ini\n'}
+[0.035250] (robot_scene_sensors) StdoutLine: {'line': b'   Site: rafkat-server\n'}
+[0.035468] (robot_scene_sensors) StdoutLine: {'line': b'   Build name: (empty)\n'}
+[0.035681] (robot_scene_sensors) StdoutLine: {'line': b' Add coverage exclude regular expressions.\n'}
+[0.035928] (robot_scene_sensors) StdoutLine: {'line': b'Create new tag: 20261015-1336 - Experimental\n'}
+[0.036226] (robot_scene_sensors) StdoutLine: {'line': b'UpdateCTestConfiguration  from :/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/CTestConfiguration.ini\n'}
+[0.036446] (robot_scene_sensors) StdoutLine: {'line': b'Parse Config file:/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/CTestConfiguration.ini\n'}
+[0.036662] (robot_scene_sensors) StdoutLine: {'line': b'Test project /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors\n'}
+[0.036859] (robot_scene_sensors) StdoutLine: {'line': b'Constructing a list of tests\n'}
+[0.037057] (robot_scene_sensors) StdoutLine: {'line': b'Done constructing a list of tests\n'}
+[0.037311] (robot_scene_sensors) StdoutLine: {'line': b'Updating test list for fixtures\n'}
+[0.037516] (robot_scene_sensors) StdoutLine: {'line': b'Added 0 tests to meet fixture requirements\n'}
+[0.037714] (robot_scene_sensors) StdoutLine: {'line': b'Checking test dependency graph...\n'}
+[0.037911] (robot_scene_sensors) StdoutLine: {'line': b'Checking test dependency graph end\n'}
+[0.038105] (robot_scene_sensors) StdoutLine: {'line': b'test 1\n'}
+[0.038354] (robot_scene_sensors) StdoutLine: {'line': b'    Start 1: test_lidar_geometry\n'}
+[0.038552] (robot_scene_sensors) StdoutLine: {'line': b'\n'}
+[0.038749] (robot_scene_sensors) StdoutLine: {'line': b'1: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/test_lidar_geometry.gtest.xml" "--package-name" "robot_scene_sensors" "--output-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/ament_cmake_gtest/test_lidar_geometry.txt" "--command" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_lidar_geometry" "--gtest_output=xml:/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/test_lidar_geometry.gtest.xml"\n'}
+[0.038973] (robot_scene_sensors) StdoutLine: {'line': b'1: Working Directory: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors\n'}
+[0.039211] (robot_scene_sensors) StdoutLine: {'line': b'1: Test timeout computed to be: 60\n'}
+[0.096219] (robot_scene_sensors) StdoutLine: {'line': b"1: -- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors':\n"}
+[0.096532] (robot_scene_sensors) StdoutLine: {'line': b'1:  - /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_lidar_geometry --gtest_output=xml:/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/test_lidar_geometry.gtest.xml\n'}
+[0.098224] (robot_scene_sensors) StdoutLine: {'line': b'1: Running main() from /opt/ros/jazzy/src/gtest_vendor/src/gtest_main.cc\n'}
+[0.098561] (robot_scene_sensors) StdoutLine: {'line': b'1: [==========] Running 4 tests from 1 test suite.\n'}
+[0.098843] (robot_scene_sensors) StdoutLine: {'line': b'1: [----------] Global test environment set-up.\n'}
+[0.099167] (robot_scene_sensors) StdoutLine: {'line': b'1: [----------] 4 tests from LidarGeometry\n'}
+[0.099399] (-) TimerEvent: {}
+[0.099598] (robot_scene_sensors) StdoutLine: {'line': b'1: [ RUN      ] LidarGeometry.ZeroAngle\n'}
+[0.099913] (robot_scene_sensors) StdoutLine: {'line': b'1: [       OK ] LidarGeometry.ZeroAngle (0 ms)\n'}
+[0.100180] (robot_scene_sensors) StdoutLine: {'line': b'1: [ RUN      ] LidarGeometry.NinetyDegrees\n'}
+[0.100430] (robot_scene_sensors) StdoutLine: {'line': b'1: [       OK ] LidarGeometry.NinetyDegrees (0 ms)\n'}
+[0.100666] (robot_scene_sensors) StdoutLine: {'line': b'1: [ RUN      ] LidarGeometry.InvalidRanges\n'}
+[0.100893] (robot_scene_sensors) StdoutLine: {'line': b'1: [       OK ] LidarGeometry.InvalidRanges (0 ms)\n'}
+[0.101137] (robot_scene_sensors) StdoutLine: {'line': b'1: [ RUN      ] LidarGeometry.AngleIncrement\n'}
+[0.101391] (robot_scene_sensors) StdoutLine: {'line': b'1: [       OK ] LidarGeometry.AngleIncrement (0 ms)\n'}
+[0.101649] (robot_scene_sensors) StdoutLine: {'line': b'1: [----------] 4 tests from LidarGeometry (0 ms total)\n'}
+[0.101967] (robot_scene_sensors) StdoutLine: {'line': b'1: \n'}
+[0.102266] (robot_scene_sensors) StdoutLine: {'line': b'1: [----------] Global test environment tear-down\n'}
+[0.102508] (robot_scene_sensors) StdoutLine: {'line': b'1: [==========] 4 tests from 1 test suite ran. (0 ms total)\n'}
+[0.102732] (robot_scene_sensors) StdoutLine: {'line': b'1: [  PASSED  ] 4 tests.\n'}
+[0.102960] (robot_scene_sensors) StdoutLine: {'line': b'1: -- run_test.py: return code 0\n'}
+[0.103236] (robot_scene_sensors) StdoutLine: {'line': b"1: -- run_test.py: inject classname prefix into gtest result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/test_lidar_geometry.gtest.xml'\n"}
+[0.103489] (robot_scene_sensors) StdoutLine: {'line': b"1: -- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/test_lidar_geometry.gtest.xml'\n"}
+[0.107522] (robot_scene_sensors) StdoutLine: {'line': b'1/7 Test #1: test_lidar_geometry ..............   Passed    0.07 sec\n'}
+[0.107866] (robot_scene_sensors) StdoutLine: {'line': b'test 2\n'}
+[0.108208] (robot_scene_sensors) StdoutLine: {'line': b'    Start 2: cppcheck\n'}
+[0.108457] (robot_scene_sensors) StdoutLine: {'line': b'\n'}
+[0.108690] (robot_scene_sensors) StdoutLine: {'line': b'2: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/cppcheck.xunit.xml" "--package-name" "robot_scene_sensors" "--output-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/ament_cppcheck/cppcheck.txt" "--command" "/opt/ros/jazzy/bin/ament_cppcheck" "--xunit-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/cppcheck.xunit.xml" "--include_dirs" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/include"\n'}
+[0.108981] (robot_scene_sensors) StdoutLine: {'line': b'2: Working Directory: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors\n'}
+[0.109248] (robot_scene_sensors) StdoutLine: {'line': b'2: Test timeout computed to be: 300\n'}
+[0.169521] (robot_scene_sensors) StdoutLine: {'line': b"2: -- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':\n"}
+[0.169893] (robot_scene_sensors) StdoutLine: {'line': b'2:  - /opt/ros/jazzy/bin/ament_cppcheck --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/cppcheck.xunit.xml --include_dirs /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/include\n'}
+[0.199513] (-) TimerEvent: {}
+[0.253389] (robot_scene_sensors) StdoutLine: {'line': b'2: cppcheck 2.13.0 has known performance issues and therefore will not be used, set the AMENT_CPPCHECK_ALLOW_SLOW_VERSIONS environment variable to override this.\n'}
+[0.267293] (robot_scene_sensors) StdoutLine: {'line': b'2: -- run_test.py: return code 0\n'}
+[0.267659] (robot_scene_sensors) StdoutLine: {'line': b"2: -- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/cppcheck.xunit.xml'\n"}
+[0.277208] (robot_scene_sensors) StdoutLine: {'line': b'2/7 Test #2: cppcheck .........................   Passed    0.17 sec\n'}
+[0.277587] (robot_scene_sensors) StdoutLine: {'line': b'test 3\n'}
+[0.277816] (robot_scene_sensors) StdoutLine: {'line': b'    Start 3: flake8\n'}
+[0.278045] (robot_scene_sensors) StdoutLine: {'line': b'\n'}
+[0.278320] (robot_scene_sensors) StdoutLine: {'line': b'3: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/flake8.xunit.xml" "--package-name" "robot_scene_sensors" "--output-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/ament_flake8/flake8.txt" "--command" "/opt/ros/jazzy/bin/ament_flake8" "--xunit-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/flake8.xunit.xml"\n'}
+[0.278590] (robot_scene_sensors) StdoutLine: {'line': b'3: Working Directory: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors\n'}
+[0.278817] (robot_scene_sensors) StdoutLine: {'line': b'3: Test timeout computed to be: 60\n'}
+[0.299597] (-) TimerEvent: {}
+[0.347821] (robot_scene_sensors) StdoutLine: {'line': b"3: -- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':\n"}
+[0.348220] (robot_scene_sensors) StdoutLine: {'line': b'3:  - /opt/ros/jazzy/bin/ament_flake8 --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/flake8.xunit.xml\n'}
+[0.399715] (-) TimerEvent: {}
+[0.500082] (-) TimerEvent: {}
+[0.600476] (-) TimerEvent: {}
+[0.683072] (robot_scene_sensors) StdoutLine: {'line': b'3: \n'}
+[0.683501] (robot_scene_sensors) StdoutLine: {'line': b'3: 2 files checked\n'}
+[0.683762] (robot_scene_sensors) StdoutLine: {'line': b'3: No problems found\n'}
+[0.684012] (robot_scene_sensors) StdoutLine: {'line': b'3: \n'}
+[0.684315] (robot_scene_sensors) StdoutLine: {'line': b'3: Checked files:\n'}
+[0.684572] (robot_scene_sensors) StdoutLine: {'line': b'3: \n'}
+[0.684818] (robot_scene_sensors) StdoutLine: {'line': b'3: * ./install/_local_setup_util_ps1.py\n'}
+[0.685064] (robot_scene_sensors) StdoutLine: {'line': b'3: * ./install/_local_setup_util_sh.py\n'}
+[0.700572] (-) TimerEvent: {}
+[0.715000] (robot_scene_sensors) StdoutLine: {'line': b'3: -- run_test.py: return code 0\n'}
+[0.715392] (robot_scene_sensors) StdoutLine: {'line': b"3: -- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/flake8.xunit.xml'\n"}
+[0.724627] (robot_scene_sensors) StdoutLine: {'line': b'3/7 Test #3: flake8 ...........................   Passed    0.45 sec\n'}
+[0.725047] (robot_scene_sensors) StdoutLine: {'line': b'test 4\n'}
+[0.725324] (robot_scene_sensors) StdoutLine: {'line': b'    Start 4: lint_cmake\n'}
+[0.725556] (robot_scene_sensors) StdoutLine: {'line': b'\n'}
+[0.725783] (robot_scene_sensors) StdoutLine: {'line': b'4: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/lint_cmake.xunit.xml" "--package-name" "robot_scene_sensors" "--output-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/ament_lint_cmake/lint_cmake.txt" "--command" "/opt/ros/jazzy/bin/ament_lint_cmake" "--xunit-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/lint_cmake.xunit.xml"\n'}
+[0.726041] (robot_scene_sensors) StdoutLine: {'line': b'4: Working Directory: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors\n'}
+[0.726310] (robot_scene_sensors) StdoutLine: {'line': b'4: Test timeout computed to be: 60\n'}
+[0.783875] (robot_scene_sensors) StdoutLine: {'line': b"4: -- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':\n"}
+[0.784298] (robot_scene_sensors) StdoutLine: {'line': b'4:  - /opt/ros/jazzy/bin/ament_lint_cmake --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/lint_cmake.xunit.xml\n'}
+[0.800660] (-) TimerEvent: {}
+[0.858763] (robot_scene_sensors) StdoutLine: {'line': b'4: \n'}
+[0.859161] (robot_scene_sensors) StdoutLine: {'line': b'4: No problems found\n'}
+[0.870268] (robot_scene_sensors) StdoutLine: {'line': b'4: -- run_test.py: return code 0\n'}
+[0.870611] (robot_scene_sensors) StdoutLine: {'line': b"4: -- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/lint_cmake.xunit.xml'\n"}
+[0.879774] (robot_scene_sensors) StdoutLine: {'line': b'4/7 Test #4: lint_cmake .......................   Passed    0.15 sec\n'}
+[0.880208] (robot_scene_sensors) StdoutLine: {'line': b'test 5\n'}
+[0.880458] (robot_scene_sensors) StdoutLine: {'line': b'    Start 5: pep257\n'}
+[0.880684] (robot_scene_sensors) StdoutLine: {'line': b'\n'}
+[0.880911] (robot_scene_sensors) StdoutLine: {'line': b'5: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/pep257.xunit.xml" "--package-name" "robot_scene_sensors" "--output-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/ament_pep257/pep257.txt" "--command" "/opt/ros/jazzy/bin/ament_pep257" "--xunit-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/pep257.xunit.xml"\n'}
+[0.881194] (robot_scene_sensors) StdoutLine: {'line': b'5: Working Directory: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors\n'}
+[0.881503] (robot_scene_sensors) StdoutLine: {'line': b'5: Test timeout computed to be: 60\n'}
+[0.900752] (-) TimerEvent: {}
+[0.949011] (robot_scene_sensors) StdoutLine: {'line': b"5: -- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':\n"}
+[0.949410] (robot_scene_sensors) StdoutLine: {'line': b'5:  - /opt/ros/jazzy/bin/ament_pep257 --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/pep257.xunit.xml\n'}
+[1.000868] (-) TimerEvent: {}
+[1.101179] (-) TimerEvent: {}
+[1.142967] (robot_scene_sensors) StdoutLine: {'line': b'5: checking ./install/_local_setup_util_ps1.py\n'}
+[1.143198] (robot_scene_sensors) StdoutLine: {'line': b'5: checking ./install/_local_setup_util_sh.py\n'}
+[1.143326] (robot_scene_sensors) StdoutLine: {'line': b'5: No problems found\n'}
+[1.161417] (robot_scene_sensors) StdoutLine: {'line': b'5: -- run_test.py: return code 0\n'}
+[1.161831] (robot_scene_sensors) StdoutLine: {'line': b"5: -- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/pep257.xunit.xml'\n"}
+[1.170963] (robot_scene_sensors) StdoutLine: {'line': b'5/7 Test #5: pep257 ...........................   Passed    0.29 sec\n'}
+[1.171247] (robot_scene_sensors) StdoutLine: {'line': b'test 6\n'}
+[1.171354] (robot_scene_sensors) StdoutLine: {'line': b'    Start 6: uncrustify\n'}
+[1.171561] (robot_scene_sensors) StdoutLine: {'line': b'\n'}
+[1.171659] (robot_scene_sensors) StdoutLine: {'line': b'6: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/uncrustify.xunit.xml" "--package-name" "robot_scene_sensors" "--output-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/ament_uncrustify/uncrustify.txt" "--command" "/opt/ros/jazzy/bin/ament_uncrustify" "--xunit-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/uncrustify.xunit.xml"\n'}
+[1.171757] (robot_scene_sensors) StdoutLine: {'line': b'6: Working Directory: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors\n'}
+[1.171849] (robot_scene_sensors) StdoutLine: {'line': b'6: Test timeout computed to be: 60\n'}
+[1.201254] (-) TimerEvent: {}
+[1.242312] (robot_scene_sensors) StdoutLine: {'line': b"6: -- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':\n"}
+[1.242706] (robot_scene_sensors) StdoutLine: {'line': b'6:  - /opt/ros/jazzy/bin/ament_uncrustify --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/uncrustify.xunit.xml\n'}
+[1.301365] (-) TimerEvent: {}
+[1.357564] (robot_scene_sensors) StdoutLine: {'line': b"6: No code style divergence in file 'include/robot_scene_sensors/lidar_geometry.hpp'\n"}
+[1.357868] (robot_scene_sensors) StdoutLine: {'line': b'6: \n'}
+[1.358070] (robot_scene_sensors) StdoutLine: {'line': b"6: No code style divergence in file 'install/robot_scene_sensors/include/robot_scene_sensors/lidar_geometry.hpp'\n"}
+[1.358310] (robot_scene_sensors) StdoutLine: {'line': b'6: \n'}
+[1.358514] (robot_scene_sensors) StdoutLine: {'line': b"6: No code style divergence in file 'src/lidar_geometry.cpp'\n"}
+[1.358709] (robot_scene_sensors) StdoutLine: {'line': b'6: \n'}
+[1.358904] (robot_scene_sensors) StdoutLine: {'line': b"6: No code style divergence in file 'src/lidar_processor.cpp'\n"}
+[1.359099] (robot_scene_sensors) StdoutLine: {'line': b'6: \n'}
+[1.359328] (robot_scene_sensors) StdoutLine: {'line': b"6: No code style divergence in file 'src/sensor_node.cpp'\n"}
+[1.359530] (robot_scene_sensors) StdoutLine: {'line': b'6: \n'}
+[1.359726] (robot_scene_sensors) StdoutLine: {'line': b"6: No code style divergence in file 'test/test_lidar_geometry.cpp'\n"}
+[1.359922] (robot_scene_sensors) StdoutLine: {'line': b'6: \n'}
+[1.360132] (robot_scene_sensors) StdoutLine: {'line': b'6: No problems found\n'}
+[1.369774] (robot_scene_sensors) StdoutLine: {'line': b'6: -- run_test.py: return code 0\n'}
+[1.370044] (robot_scene_sensors) StdoutLine: {'line': b"6: -- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/uncrustify.xunit.xml'\n"}
+[1.378623] (robot_scene_sensors) StdoutLine: {'line': b'6/7 Test #6: uncrustify .......................   Passed    0.21 sec\n'}
+[1.378960] (robot_scene_sensors) StdoutLine: {'line': b'test 7\n'}
+[1.379192] (robot_scene_sensors) StdoutLine: {'line': b'    Start 7: xmllint\n'}
+[1.379405] (robot_scene_sensors) StdoutLine: {'line': b'\n'}
+[1.379603] (robot_scene_sensors) StdoutLine: {'line': b'7: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/xmllint.xunit.xml" "--package-name" "robot_scene_sensors" "--output-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/ament_xmllint/xmllint.txt" "--command" "/opt/ros/jazzy/bin/ament_xmllint" "--xunit-file" "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/xmllint.xunit.xml"\n'}
+[1.379843] (robot_scene_sensors) StdoutLine: {'line': b'7: Working Directory: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors\n'}
+[1.380042] (robot_scene_sensors) StdoutLine: {'line': b'7: Test timeout computed to be: 60\n'}
+[1.401452] (-) TimerEvent: {}
+[1.438159] (robot_scene_sensors) StdoutLine: {'line': b"7: -- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':\n"}
+[1.438492] (robot_scene_sensors) StdoutLine: {'line': b'7:  - /opt/ros/jazzy/bin/ament_xmllint --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/xmllint.xunit.xml\n'}
+[1.501584] (-) TimerEvent: {}
+[1.601969] (-) TimerEvent: {}
+[1.702352] (-) TimerEvent: {}
+[1.802777] (-) TimerEvent: {}
+[1.903183] (-) TimerEvent: {}
+[2.003582] (-) TimerEvent: {}
+[2.104001] (-) TimerEvent: {}
+[2.204400] (-) TimerEvent: {}
+[2.304791] (-) TimerEvent: {}
+[2.405150] (-) TimerEvent: {}
+[2.505546] (-) TimerEvent: {}
+[2.605916] (-) TimerEvent: {}
+[2.706321] (-) TimerEvent: {}
+[2.806727] (-) TimerEvent: {}
+[2.831337] (robot_scene_sensors) StdoutLine: {'line': b"7: File 'package.xml' is valid\n"}
+[2.831795] (robot_scene_sensors) StdoutLine: {'line': b'7: \n'}
+[2.832088] (robot_scene_sensors) StdoutLine: {'line': b"7: File 'install/robot_scene_sensors/share/robot_scene_sensors/package.xml' is valid\n"}
+[2.832447] (robot_scene_sensors) StdoutLine: {'line': b'7: \n'}
+[2.832726] (robot_scene_sensors) StdoutLine: {'line': b'7: No problems found\n'}
+[2.861802] (robot_scene_sensors) StdoutLine: {'line': b'7: -- run_test.py: return code 0\n'}
+[2.862347] (robot_scene_sensors) StdoutLine: {'line': b"7: -- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/xmllint.xunit.xml'\n"}
+[2.871182] (robot_scene_sensors) StdoutLine: {'line': b'7/7 Test #7: xmllint ..........................   Passed    1.49 sec\n'}
+[2.872095] (robot_scene_sensors) StdoutLine: {'line': b'\n'}
+[2.872479] (robot_scene_sensors) StdoutLine: {'line': b'\x1b[0;32m100% tests passed\x1b[0;0m, 0 tests failed\x1b[0;0m out of 7\n'}
+[2.872725] (robot_scene_sensors) StdoutLine: {'line': b'\n'}
+[2.872926] (robot_scene_sensors) StdoutLine: {'line': b'Label Time Summary:\n'}
+[2.873137] (robot_scene_sensors) StdoutLine: {'line': b'cppcheck      =   0.17 sec*proc (1 test)\n'}
+[2.873356] (robot_scene_sensors) StdoutLine: {'line': b'flake8        =   0.45 sec*proc (1 test)\n'}
+[2.873553] (robot_scene_sensors) StdoutLine: {'line': b'gtest         =   0.07 sec*proc (1 test)\n'}
+[2.873751] (robot_scene_sensors) StdoutLine: {'line': b'lint_cmake    =   0.15 sec*proc (1 test)\n'}
+[2.873945] (robot_scene_sensors) StdoutLine: {'line': b'linter        =   2.76 sec*proc (6 tests)\n'}
+[2.874162] (robot_scene_sensors) StdoutLine: {'line': b'pep257        =   0.29 sec*proc (1 test)\n'}
+[2.874379] (robot_scene_sensors) StdoutLine: {'line': b'uncrustify    =   0.21 sec*proc (1 test)\n'}
+[2.874574] (robot_scene_sensors) StdoutLine: {'line': b'xmllint       =   1.49 sec*proc (1 test)\n'}
+[2.874768] (robot_scene_sensors) StdoutLine: {'line': b'\n'}
+[2.874962] (robot_scene_sensors) StdoutLine: {'line': b'Total Test time (real) =   2.84 sec\n'}
+[2.882639] (robot_scene_sensors) CommandEnded: {'returncode': 0}
+[2.883544] (robot_scene_sensors) JobEnded: {'identifier': 'robot_scene_sensors', 'rc': 0}
+[2.884412] (-) EventReactorShutdown: {}

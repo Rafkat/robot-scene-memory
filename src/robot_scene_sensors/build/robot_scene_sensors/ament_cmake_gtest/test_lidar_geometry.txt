@@ -1,0 +1,25 @@
+-- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors':
+ - /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_lidar_geometry --gtest_output=xml:/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/test_lidar_geometry.gtest.xml
+
+Running main() from /opt/ros/jazzy/src/gtest_vendor/src/gtest_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from LidarGeometry
+[ RUN      ] LidarGeometry.ZeroAngle
+[       OK ] LidarGeometry.ZeroAngle (0 ms)
+[ RUN      ] LidarGeometry.NinetyDegrees
+[       OK ] LidarGeometry.NinetyDegrees (0 ms)
+[ RUN      ] LidarGeometry.InvalidRanges
+[       OK ] LidarGeometry.InvalidRanges (0 ms)
+[ RUN      ] LidarGeometry.AngleIncrement
+[       OK ] LidarGeometry.AngleIncrement (0 ms)
+[----------] 4 tests from LidarGeometry (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 4 tests.
+
+
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/test_lidar_geometry.gtest.xml'
+-- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/test_lidar_geometry.gtest.xml'

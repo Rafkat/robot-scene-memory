@@ -1,0 +1,12 @@
+-- run_test.py: invoking following command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors':
+ - /opt/ros/jazzy/bin/ament_xmllint --xunit-file /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/xmllint.xunit.xml
+
+File 'package.xml' is valid
+
+File 'install/robot_scene_sensors/share/robot_scene_sensors/package.xml' is valid
+
+No problems found
+
+
+-- run_test.py: return code 0
+-- run_test.py: verify result file '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors/test_results/robot_scene_sensors/xmllint.xunit.xml'

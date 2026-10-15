@@ -1,0 +1,53 @@
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (0.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors
+[ 16%] Built target gtest_main
+[ 33%] Built target gtest
+[ 50%] Built target lidar_geometry
+[ 66%] Built target sensor_node
+[ 83%] Built target test_lidar_geometry
+[100%] Built target lidar_processor
+-- Install configuration: ""
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/lib/robot_scene_sensors/sensor_node
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/lib/robot_scene_sensors/lidar_processor
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/lib/liblidar_geometry.a
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/include
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/include/robot_scene_sensors
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/include/robot_scene_sensors/lidar_geometry.hpp
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/ament_index/resource_index/package_run_dependencies/robot_scene_sensors
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/ament_index/resource_index/parent_prefix_path/robot_scene_sensors
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/environment/ament_prefix_path.sh
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/environment/path.sh
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/environment/path.dsv
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/local_setup.bash
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/local_setup.sh
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/local_setup.zsh
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/local_setup.dsv
+-- Installing: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/package.dsv
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/ament_index/resource_index/packages/robot_scene_sensors
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/cmake/robot_scene_sensorsConfig.cmake
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/cmake/robot_scene_sensorsConfig-version.cmake
+-- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/package.xml

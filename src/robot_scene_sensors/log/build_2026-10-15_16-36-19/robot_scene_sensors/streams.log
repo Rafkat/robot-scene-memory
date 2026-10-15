@@ -1,0 +1,67 @@
+[0.011s] Invoking command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors -- -j12 -l12
+[0.048s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.363s] -- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.413s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.423s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.436s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.451s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.523s] -- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.524s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.605s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.683s] -- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.747s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.854s] -- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[0.880s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.881s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/include>
+[0.881s] -- Configured cppcheck exclude dirs and/or files: 
+[0.884s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.884s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.889s] -- Added test 'lint_cmake' to check CMake code style
+[0.892s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.912s] -- Added test 'uncrustify' to check C / C++ code style
+[0.913s] -- Configured uncrustify additional arguments: 
+[0.915s] -- Added test 'xmllint' to check XML markup files
+[0.916s] -- Configuring done (0.9s)
+[0.938s] -- Generating done (0.0s)
+[0.947s] -- Build files have been written to: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors
+[1.004s] [ 33%] Built target gtest_main
+[1.004s] [ 33%] Built target gtest
+[1.014s] [ 41%] [32mBuilding CXX object CMakeFiles/sensor_node.dir/src/sensor_node.cpp.o[0m
+[1.015s] [ 50%] [32mBuilding CXX object CMakeFiles/lidar_geometry.dir/src/lidar_geometry.cpp.o[0m
+[1.278s] [ 58%] [32m[1mLinking CXX static library liblidar_geometry.a[0m
+[1.346s] [ 58%] Built target lidar_geometry
+[1.389s] [ 66%] [32mBuilding CXX object CMakeFiles/lidar_processor.dir/src/lidar_processor.cpp.o[0m
+[1.390s] [ 75%] [32mBuilding CXX object CMakeFiles/test_lidar_geometry.dir/test/test_lidar_geometry.cpp.o[0m
+[2.463s] [ 83%] [32m[1mLinking CXX executable test_lidar_geometry[0m
+[2.680s] [ 83%] Built target test_lidar_geometry
+[4.049s] [ 91%] [32m[1mLinking CXX executable sensor_node[0m
+[4.196s] [ 91%] Built target sensor_node
+[8.738s] [100%] [32m[1mLinking CXX executable lidar_processor[0m
+[9.069s] [100%] Built target lidar_processor
+[9.088s] Invoked command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors -- -j12 -l12
+[9.110s] Invoking command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors
+[9.120s] -- Install configuration: ""
+[9.120s] -- Installing: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/lib/robot_scene_sensors/sensor_node
+[9.121s] -- Set non-toolchain portion of runtime path of "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/lib/robot_scene_sensors/sensor_node" to ""
+[9.121s] -- Installing: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/lib/robot_scene_sensors/lidar_processor
+[9.127s] -- Set non-toolchain portion of runtime path of "/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/lib/robot_scene_sensors/lidar_processor" to ""
+[9.127s] -- Installing: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/lib/liblidar_geometry.a
+[9.127s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/include
+[9.128s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/include/robot_scene_sensors
+[9.128s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/include/robot_scene_sensors/lidar_geometry.hpp
+[9.128s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/ament_index/resource_index/package_run_dependencies/robot_scene_sensors
+[9.129s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/ament_index/resource_index/parent_prefix_path/robot_scene_sensors
+[9.129s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/environment/ament_prefix_path.sh
+[9.129s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/environment/ament_prefix_path.dsv
+[9.129s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/environment/path.sh
+[9.130s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/environment/path.dsv
+[9.130s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/local_setup.bash
+[9.130s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/local_setup.sh
+[9.130s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/local_setup.zsh
+[9.130s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/local_setup.dsv
+[9.131s] -- Installing: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/package.dsv
+[9.131s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/ament_index/resource_index/packages/robot_scene_sensors
+[9.131s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/cmake/robot_scene_sensorsConfig.cmake
+[9.131s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/cmake/robot_scene_sensorsConfig-version.cmake
+[9.131s] -- Up-to-date: /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/install/robot_scene_sensors/share/robot_scene_sensors/package.xml
+[9.132s] Invoked command in '/home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/rafkat/my_projects/robot-scene-memory/src/robot_scene_sensors/build/robot_scene_sensors

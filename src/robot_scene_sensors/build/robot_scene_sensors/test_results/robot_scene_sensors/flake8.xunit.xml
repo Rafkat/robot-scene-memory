@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite
+  name="robot_scene_sensors.flake8"
+  tests="1"
+  errors="0"
+  failures="0"
+  time="0.242"
+>
+  <testcase
+    name="flake8"
+    classname="robot_scene_sensors.flake8"/>
+  <system-out>Checked files:
+* ./install/_local_setup_util_ps1.py
+* ./install/_local_setup_util_sh.py</system-out>
+</testsuite>
