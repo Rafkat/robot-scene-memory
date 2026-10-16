@@ -56,7 +56,7 @@ private:
               3
     );
 
-    RCLCPP_THROTTLE(
+    RCLCPP_INFO_THROTTLE(
       get_logger(),
       *get_clock(),
       1000,
