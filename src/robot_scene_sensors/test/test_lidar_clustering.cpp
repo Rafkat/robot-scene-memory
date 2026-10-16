@@ -88,3 +88,52 @@ TEST(LidarClustering, EmptyScan)
 
     EXPECT_TRUE(clusters.empty());
 }
+
+
+TEST(LidarClustering, AdaptiveThresholdIncreasesWithDistance)
+{
+  constexpr float angle_increment = 0.0175f;
+  constexpr float min_threshold = 0.05f;
+  constexpr float scale = 1.5f;
+
+  const float near_threshold =
+    rsm::compute_adaptive_threshold(
+      2.0f,
+      angle_increment,
+      min_threshold,
+      scale
+    );
+
+  const float far_threshold =
+    rsm::compute_adaptive_threshold(
+      8.0f,
+      angle_increment,
+      min_threshold,
+      scale
+    );
+
+  EXPECT_NEAR(near_threshold, 0.1025f, 1e-5f);
+  EXPECT_NEAR(far_threshold, 0.26f, 1e-5f);
+
+  EXPECT_GT(far_threshold, near_threshold);
+}
+
+TEST(LidarClustering, AdaptiveThresholdKeepsFarPointsTogether)
+{
+  const rsm::ScanGeometry geometry{
+    0.0f,
+    0.0175f,
+    0.1f,
+    10.0f
+  };
+
+  const std::vector<float> ranges{
+    8.0f, 8.0f, 8.0f
+  };
+
+  const auto clusters =
+    rsm::cluster_scan(ranges, geometry, 0.05f, 2);
+
+  ASSERT_EQ(clusters.size(), 1u);
+  EXPECT_EQ(clusters[0].size(), 3u);
+}

@@ -6,9 +6,19 @@
 #include <cmath>
 #include <stdexcept>
 #include <utility>
+#include <algorithm>
 
 namespace robot_scene_sensors
 {
+float compute_adaptive_threshold(
+  float range,
+  float angle_increment,
+  float min_threshold,
+  float scale
+) {
+  return min_threshold + scale * range * std::abs(angle_increment);
+}
+
 std::vector<Cluster> cluster_scan(
   const std::vector<float> & ranges,
   const ScanGeometry & geometry,
@@ -32,6 +42,7 @@ std::vector<Cluster> cluster_scan(
       current_cluster.clear();
     };
 
+  float previous_range = 0.0f;
   for (std::size_t i = 0; i < ranges.size(); ++i) {
     const float r = ranges[i];
 
@@ -59,12 +70,20 @@ std::vector<Cluster> cluster_scan(
                     point.y - previous.y
       );
 
-      if (distance > distance_threshold) {
+      const float adaptive_threshold = compute_adaptive_threshold(
+        std::max(previous_range, r),
+        geometry.angle_increment,
+        distance_threshold,
+        1.5f
+      );
+
+      if (distance > adaptive_threshold) {
         finish_cluster();
       }
     }
 
     current_cluster.push_back(point);
+    previous_range = r;
   }
 
   finish_cluster();

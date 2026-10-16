@@ -21,7 +21,16 @@ std::vector<Cluster> cluster_scan(
   float distance_threshold,
   std::size_t min_cluster_size = 1
 );
+
+float compute_adaptive_threshold(
+  float range,
+  float angle_increment,
+  float min_threshold,
+  float scale
+);
+
 }
+
 
 
 #endif //ROBOT_SCENE_MEMORY_LIDAR_CLUSTERING_H
