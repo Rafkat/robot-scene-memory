@@ -6,6 +6,7 @@
 #include "sensor_msgs/msg/laser_scan.hpp"
 
 #include "robot_scene_sensors/lidar_geometry.hpp"
+#include "robot_scene_sensors/lidar_clustering.hpp"
 
 using robot_scene_sensors::ScanGeometry;
 using robot_scene_sensors::polar_to_cartesian;
@@ -46,6 +47,22 @@ private:
     const auto points = polar_to_cartesian(
             scan.ranges,
             geometry
+    );
+
+    const auto clusters = cluster_scan(
+              scan.ranges,
+              geometry,
+              0.05f,
+              3
+    );
+
+    RCLCPP_THROTTLE(
+      get_logger(),
+      *get_clock(),
+      1000,
+      "Valid points: %zu | Detected clusters: %zu",
+      points.size(),
+      clusters.size()
     );
 
     if (points.empty()) {
