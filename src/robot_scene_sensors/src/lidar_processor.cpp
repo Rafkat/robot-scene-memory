@@ -71,6 +71,7 @@ private:
       RCLCPP_INFO_THROTTLE(
         get_logger(),
         *get_clock(),
+        1000,
         "Cluster: %zu | Points: %zu",
         i,
         cluster.size()
