@@ -62,7 +62,23 @@ private:
     output << "Detected clusters: " << clusters.size();
 
     for (std::size_t i = 0; i < clusters.size(); ++i) {
-      output << " | Cluster " << i << ": " << clusters[i].size() << " points";
+      const auto & cluster = clusters[i];
+
+      float sum_x = 0.0f;
+      float sum_y = 0.0f;
+
+      for (const auto & point : cluster) {
+        sum_x += point.x;
+        sum_y += point.y;
+      }
+
+      const float center_x = sum_x / static_cast<float>(cluster.size());
+      const float center_y = sum_y / static_cast<float>(cluster.size());
+
+      output << " | C" << i
+             << ": N=" << cluster.size()
+             << " center=(" << center_x
+             << ", " << center_y << ")";
     }
 
     RCLCPP_INFO_THROTTLE(
