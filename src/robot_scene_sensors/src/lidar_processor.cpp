@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <cmath>
 #include <memory>
+#include <sstream>
 
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/laser_scan.hpp"
@@ -56,28 +57,21 @@ private:
               3
     );
 
+    std::ostringstream output;
+
+    output << "Detected clusters: " << clusters.size();
+
+    for (std::size_t i = 0; i < clusters.size(); ++i) {
+      output << " | Cluster " << i << ": " << clusters[i].size() << " points";
+    }
+
     RCLCPP_INFO_THROTTLE(
       get_logger(),
       *get_clock(),
       1000,
-      "Valid points: %zu | Detected clusters: %zu",
-      points.size(),
-      clusters.size()
+      "%s",
+      output.str().c_str()
     );
-
-    for (std::size_t i = 0; i < clusters.size(); ++i) {
-      const auto & cluster = clusters[i];
-
-      RCLCPP_INFO_THROTTLE(
-        get_logger(),
-        *get_clock(),
-        1000,
-        "Cluster: %zu | Points: %zu",
-        i,
-        cluster.size()
-        );
-    }
-
 
     if (points.empty()) {
       RCLCPP_WARN(
