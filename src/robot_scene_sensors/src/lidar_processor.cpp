@@ -65,6 +65,19 @@ private:
       clusters.size()
     );
 
+    for (std::size_t i = 0; i < clusters.size(); ++i) {
+      const auto & cluster = clusters[i];
+
+      RCLCPP_INFO_THROTTLE(
+        get_logger(),
+        *get_clock(),
+        "Cluster: %zu | Points: %zu",
+        i,
+        cluster.size()
+        );
+    }
+
+
     if (points.empty()) {
       RCLCPP_WARN(
                 get_logger(),
