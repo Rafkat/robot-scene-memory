@@ -8,7 +8,7 @@
 
 #include "robot_scene_sensors/lidar_geometry.hpp"
 #include "robot_scene_sensors/lidar_clustering.hpp"
-#include "robot_scene_sensors/lidar_processor.hpp"
+#include "robot_scene_sensors/cluster_geometry.hpp"
 
 using robot_scene_sensors::ScanGeometry;
 using robot_scene_sensors::polar_to_cartesian;
