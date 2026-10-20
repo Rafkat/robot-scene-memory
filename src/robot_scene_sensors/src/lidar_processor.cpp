@@ -5,7 +5,10 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/laser_scan.hpp"
+#include <visualization_msgs/msg/marker.hpp>
+#include <visualization_msgs/msg/marker_array.hpp>
 
+#include "../include/robot_scene_sensors/cluster_geometry.hpp"
 #include "robot_scene_sensors/lidar_geometry.hpp"
 #include "robot_scene_sensors/lidar_clustering.hpp"
 #include "robot_scene_sensors/cluster_geometry.hpp"
@@ -26,6 +29,12 @@ public:
       [this](sensor_msgs::msg::LaserScan::ConstSharedPtr msg) {
         process_scan(*msg);
                 }
+      );
+
+    centroids_publisher_ =
+      create_publisher<visualization_msgs::msg::MarkerArray>(
+        "/cluster_centroids",
+        10
       );
 
     RCLCPP_INFO(
@@ -57,6 +66,8 @@ private:
               0.05f,
               3
     );
+
+    publish_centroids(clusters, scan)
 
     std::ostringstream output;
 
@@ -122,9 +133,56 @@ private:
     );
   }
 
+  void publish_centroids(
+    const std::vector<robot_scene_sensors::Cluster> & clusters,
+    const sensor_msgs::msg::LaserScan & scan
+  ) {
+    visualization_msgs::msg::MarkerArray marker_array;
+
+    for (std::size_t i = 0; i < clusters.size(); ++i) {
+      const auto geometry =
+        robot_scene_sensors::compute_cluster_geometry(clusters[i]);
+
+      visualization_msgs::msg::Marker marker;
+
+      marker.header = scan.header;
+      marker.ns = "cluster_centroids";
+      marker.id = static_cast<int32_t>(i);
+
+      marker.type = visualisation_msgs::msg::Marker::SPHERE;
+      marker.action = visualization_msgs::msg::Marker::ADD;
+
+      marker.pose.position.x = geometry.centroid.x;
+      marker.pose.position.y = geometry.centroid.y;
+      marker.pose.position.z = 0.0;
+
+      marker.pose.orientation.w = 1.0;
+
+      marker.scale.x = 0.15;
+      marker.scale.y = 0.15;
+      marker.scale.z = 0.15;
+
+      marker.color.r = 1.0f;
+      marker.color.g = 0.35f;
+      marker.color.b = 0.1f;
+      marker.color.a = 1.0f;
+
+      marker.lifetime.sec = 0;
+      marker.lifetime.nanosec = 500000000;
+
+      marker_array.markers.push_back(marker);
+    }
+
+    centroids_publisher_->publish(marker_array);
+  }
+
   rclcpp::Subscription<
     sensor_msgs::msg::LaserScan
   >::SharedPtr subscription_;
+
+  rclcpp::Publisher<
+      visualization_msgs::msg::MarkerArray
+    >::SharedPtr centroids_publisher_;
 };
 
 int main(int argc, char ** argv)
