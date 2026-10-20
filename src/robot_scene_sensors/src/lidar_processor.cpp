@@ -8,6 +8,7 @@
 
 #include "robot_scene_sensors/lidar_geometry.hpp"
 #include "robot_scene_sensors/lidar_clustering.hpp"
+#include "robot_scene_sensors/lidar_processor.hpp"
 
 using robot_scene_sensors::ScanGeometry;
 using robot_scene_sensors::polar_to_cartesian;
@@ -64,21 +65,18 @@ private:
     for (std::size_t i = 0; i < clusters.size(); ++i) {
       const auto & cluster = clusters[i];
 
-      float sum_x = 0.0f;
-      float sum_y = 0.0f;
+      const auto result = compute_cluster_geometry(cluster);
 
-      for (const auto & point : cluster) {
-        sum_x += point.x;
-        sum_y += point.y;
-      }
+      const float width = result.bbox.max_x - result.bbox.min_x;
+      const float height = result.bbox.max_y - result.bbox.min_y;
 
-      const float center_x = sum_x / static_cast<float>(cluster.size());
-      const float center_y = sum_y / static_cast<float>(cluster.size());
-
-      output << " | C" << i
-             << ": N=" << cluster.size()
-             << " center=(" << center_x
-             << ", " << center_y << ")";
+      output << "\nCluster " << i
+             << " | Points: " << result.point_count
+             << " | Centroid: ("
+             << result.centroid.x << ", "
+             << result.centroid.y << ")"
+             << " | BBox: "
+             << width << " x " << height;
     }
 
     RCLCPP_INFO_THROTTLE(
