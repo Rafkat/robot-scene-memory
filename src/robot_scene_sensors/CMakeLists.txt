@@ -25,6 +25,14 @@ target_include_directories(
   lidar_clustering PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
                           $<INSTALL_INTERFACE:include>)
 
+add_library(cluster_geometry src/cluster_geometry.cpp)
+
+target_include_directories(cluster_geometry
+        PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>
+)
+
 add_executable(sensor_node src/sensor_node.cpp)
 
 ament_target_dependencies(sensor_node rclcpp)
@@ -38,7 +46,7 @@ target_link_libraries(lidar_processor lidar_geometry lidar_clustering)
 install(TARGETS sensor_node lidar_processor DESTINATION lib/${PROJECT_NAME})
 
 install(
-  TARGETS lidar_geometry lidar_clustering
+  TARGETS lidar_geometry lidar_clustering cluster_geometry
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib)
 
@@ -59,6 +67,7 @@ if(BUILD_TESTING)
 
   ament_add_gtest(test_lidar_geometry test/test_lidar_geometry.cpp)
   ament_add_gtest(test_lidar_clustering test/test_lidar_clustering.cpp)
+  ament_add_gtest(test_cluster_geometry test/test_cluster_geometry.cpp)
 
   if(TARGET test_lidar_geometry)
     target_link_libraries(test_lidar_geometry lidar_geometry)
@@ -67,6 +76,14 @@ if(BUILD_TESTING)
   if(TARGET test_lidar_clustering)
     target_link_libraries(test_lidar_clustering lidar_clustering)
   endif()
+
+  if(TARGET test_cluster_geometry)
+    target_link_libraries(
+            test_cluster_geometry
+            cluster_geometry
+    )
+  endif()
+
 endif()
 
 ament_package()
