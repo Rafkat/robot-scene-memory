@@ -149,7 +149,7 @@ private:
       marker.ns = "cluster_centroids";
       marker.id = static_cast<int32_t>(i);
 
-      marker.type = visualisation_msgs::msg::Marker::SPHERE;
+      marker.type = visualization_msgs::msg::Marker::SPHERE;
       marker.action = visualization_msgs::msg::Marker::ADD;
 
       marker.pose.position.x = geometry.centroid.x;
