@@ -67,7 +67,7 @@ private:
               3
     );
 
-    publish_centroids(clusters, scan)
+    publish_centroids(clusters, scan);
 
     std::ostringstream output;
 
