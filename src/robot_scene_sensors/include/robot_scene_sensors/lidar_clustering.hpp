@@ -32,5 +32,4 @@ float compute_adaptive_threshold(
 }
 
 
-
 #endif //ROBOT_SCENE_MEMORY_LIDAR_CLUSTERING_H

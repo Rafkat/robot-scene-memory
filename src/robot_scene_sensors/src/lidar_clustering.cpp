@@ -15,7 +15,8 @@ float compute_adaptive_threshold(
   float angle_increment,
   float min_threshold,
   float scale
-) {
+)
+{
   return min_threshold + scale * range * std::abs(angle_increment);
 }
 
