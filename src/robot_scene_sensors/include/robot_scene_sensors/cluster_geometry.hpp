@@ -15,7 +15,7 @@ namespace robot_scene_sensors {
 
     struct ClusterGeometry {
         Point2D centroid;
-        BoundingBox2D bounding_box;
+        BoundingBox2D bbox;
         std::size_t point_count;
     };
 
