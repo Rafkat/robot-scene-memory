@@ -2,6 +2,7 @@
 #include <cmath>
 #include <memory>
 #include <sstream>
+#include <cstdint>
 
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/laser_scan.hpp"
@@ -37,6 +38,12 @@ public:
         10
       );
 
+    bbox_publisher_ =
+      create_publisher<visualization_msgs::msg::MarkerArray>(
+        "/cluster_bboxes",
+        10
+      );
+
     RCLCPP_INFO(
             get_logger(),
             "Lidar processor started"
@@ -68,6 +75,7 @@ private:
     );
 
     publish_centroids(clusters, scan);
+    publish_bboxes(clusters, scan);
 
     std::ostringstream output;
 
@@ -176,6 +184,58 @@ private:
     centroids_publisher_->publish(marker_array);
   }
 
+  void publish_bboxes(
+    const std::vector<robot_scene_sensors::Cluster> & clusters,
+    const sensor_msgs::msg::LaserScan & scan
+  ) {
+    visualization_msgs::msg::MarkerArray marker_array;
+
+    constexpr double min_visual_size = 0.03;
+    constexpr double marker_depth = 0.05;
+
+    for (std::size_t i = 0; i < clusters.size(); ++i) {
+      const auto geometry = robot_scene_sensors::compute_cluster_geometry(clusters[i]);
+
+      const auto & bbox = geometry.bbox;
+
+      const double center_x = (static_cast<double>(bbox.min_x) + bbox.max_x) / 2.0;
+      const double center_y = (static_cast<double>(bbox.min_y) + bbox.max_y) / 2.0;
+
+      const double width = bbox.max_x - bbox.min_x;
+      const double height = bbox.max_y - bbox.min_y;
+
+      visuaization_msgs::msg::Marker marker;
+
+      marker.header = scan.header;
+      marker.ns = "cluster_bboxes";
+      marker.id = static_cast<int32_t>(i);
+
+      marker.type = visualization_msgs::msg::Marker::CUBE;
+      marker.action = visualization_msgs::msg::Marker::ADD;
+
+      marker.pose.position.x = center_x;
+      marker.pose.position.y = center_y;
+      marker.pose.position.z = 0.0;
+
+      marker.pose.orientation.w = 1.0;
+
+      marker.scale.x = std::max(width, min_visual_size);
+      marker.scale.y = std::max(height, min_visual_size);
+      marker.scale.z = marker_depth;
+
+      marker.color.r = 0.1f;
+      marker.color.g = 0.9f;
+      marker.color.b = 0.3f;
+      marker.color.a = 0.35f;
+
+      marker.lifetime.sec = 0;
+      marker.lifetime.nanosec = 500000000;
+
+      marker_array.markers.push_back(marker);
+    }
+    bbox_publisher_->publish(marker_array);
+  }
+
   rclcpp::Subscription<
     sensor_msgs::msg::LaserScan
   >::SharedPtr subscription_;
@@ -183,6 +243,10 @@ private:
   rclcpp::Publisher<
       visualization_msgs::msg::MarkerArray
     >::SharedPtr centroids_publisher_;
+
+  rclcpp::Publisher<
+    visualization_msgs::msg::MarkerArray
+  >::SharedPtr bbox_publisher_;
 };
 
 int main(int argc, char ** argv)
