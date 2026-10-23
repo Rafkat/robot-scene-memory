@@ -204,7 +204,7 @@ private:
       const double width = bbox.max_x - bbox.min_x;
       const double height = bbox.max_y - bbox.min_y;
 
-      visuaization_msgs::msg::Marker marker;
+      visualization_msgs::msg::Marker marker;
 
       marker.header = scan.header;
       marker.ns = "cluster_bboxes";
