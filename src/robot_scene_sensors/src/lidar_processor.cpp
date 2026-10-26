@@ -263,7 +263,8 @@ private:
       );
 
       for (std::size_t i = 0; i < clusters.size(); ++i) {
-        const auto geometry = robot_scene_sensors::compute_cluster_geometry();
+        const auto geometry = robot_scene_sensors::compute_cluster_geometry(
+          clusters[i]);
 
         geometry_msgs::msg::PointStamped point_lidar;
 
