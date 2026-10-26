@@ -44,17 +44,22 @@ ament_target_dependencies(sensor_node rclcpp)
 
 add_executable(lidar_processor src/lidar_processor.cpp)
 
-ament_target_dependencies(lidar_processor rclcpp sensor_msgs visualization_msgs)
+ament_target_dependencies(
+        lidar_processor
+        rclcpp
+        sensor_msgs
+        visualization_msgs
+        geometry_msgs
+        tf2
+        tf2_ros
+        tf2_geometry_msgs
+)
 
 target_link_libraries(
         lidar_processor
         lidar_geometry
         lidar_clustering
         cluster_geometry
-        geometry_msgs
-        tf2
-        tf2_ros
-        tf2_geometry_msgs
 )
 
 install(TARGETS sensor_node lidar_processor DESTINATION lib/${PROJECT_NAME})
