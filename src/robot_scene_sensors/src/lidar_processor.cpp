@@ -8,6 +8,12 @@
 #include "sensor_msgs/msg/laser_scan.hpp"
 #include <visualization_msgs/msg/marker.hpp>
 #include <visualization_msgs/msg/marker_array.hpp>
+#include <geometry_msgs/msg/point_stamped.hpp>
+
+#include <tf2/exceptions.hpp>
+#include <tf2_ros/buffer.hpp>
+#include <tf2_ros/transform_listener.hpp>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 
 #include "../include/robot_scene_sensors/cluster_geometry.hpp"
 #include "robot_scene_sensors/lidar_geometry.hpp"
@@ -44,6 +50,10 @@ public:
         10
       );
 
+    tf_buffer_ = std::make_shared<tf2_ros::Buffer>(get_clock());
+
+    tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
+
     RCLCPP_INFO(
             get_logger(),
             "Lidar processor started"
@@ -76,6 +86,7 @@ private:
 
     publish_centroids(clusters, scan);
     publish_bboxes(clusters, scan);
+    log_centroids_in_base_link(clusters, scan);
 
     std::ostringstream output;
 
@@ -236,6 +247,63 @@ private:
     bbox_publisher_->publish(marker_array);
   }
 
+  void log_centroids_in_base_link(
+    const std::vector<robot_scene_sensors::Cluster> & clusters,
+    const sensor_msgs::msg::LaserScan & scan
+  ) {
+    if (clusters.empty()) {
+      return;
+    }
+
+    try {
+      const auto transform = tf_buffer_->lookupTransform(
+        "base_link",
+        scan.header.frame_id,
+        tf2::TimePointZero
+      );
+
+      for (std::size_t i = 0; i < clusters.size(); ++i) {
+        const auto geometry = robot_scene_sensors::compute_cluster_geometry();
+
+        geometry_msgs::msg::PointStamped point_lidar;
+
+        point_lidar.header = scan.header;
+
+        point_lidar.point.x = geometry.centroid.x;
+        point_lidar.point.y = geometry.centroid.y;
+        point_lidar.point.z = 0.0;
+
+        geometry_msgs::msg::PointStamped point_base;
+
+        tf2::doTransform(
+          point_lidar,
+          point_base,
+          transform
+        );
+
+        RCLCPP_INFO_THROTTLE(
+          get_logger(),
+          *get_clock(),
+          1000,
+          "Cluster %zu in base_link: (%.3f, %.3f, %.3f)",
+          i,
+          point_base.point.x,
+          point_base.point.y,
+          point_base.point.z
+        );
+      }
+    }
+    catch (const tf2::TransformException & ex) {
+      RCLCPP_WARN_THROTTLE(
+        get_logger(),
+        *get_clock(),
+        2000,
+        "TF2 transform unavailable: %s",
+        ex.what()
+      );
+    }
+  }
+
   rclcpp::Subscription<
     sensor_msgs::msg::LaserScan
   >::SharedPtr subscription_;
@@ -247,6 +315,9 @@ private:
   rclcpp::Publisher<
     visualization_msgs::msg::MarkerArray
   >::SharedPtr bbox_publisher_;
+
+  std::shared_ptr<tf2_ros::Buffer> tf_buffer_;
+  std::shared_ptr<tf2_ros::TransformListener> tf_listener_;
 };
 
 int main(int argc, char ** argv)

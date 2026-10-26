@@ -13,6 +13,10 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(visualization_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_ros REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 
 add_library(lidar_geometry src/lidar_geometry.cpp)
 
@@ -42,7 +46,16 @@ add_executable(lidar_processor src/lidar_processor.cpp)
 
 ament_target_dependencies(lidar_processor rclcpp sensor_msgs visualization_msgs)
 
-target_link_libraries(lidar_processor lidar_geometry lidar_clustering cluster_geometry)
+target_link_libraries(
+        lidar_processor
+        lidar_geometry
+        lidar_clustering
+        cluster_geometry
+        geometry_msgs
+        tf2
+        tf2_ros
+        tf2_geometry_msgs
+)
 
 install(TARGETS sensor_node lidar_processor DESTINATION lib/${PROJECT_NAME})
 
