@@ -247,6 +247,10 @@
         <odom_topic>/model/mobile_robot/odometry</odom_topic>
         <odom_publish_frequency>20</odom_publish_frequency>
 
+        <frame_id>odom</frame_id>
+        <child_frame_id>base_link</child_frame_id>
+        <tf_topic>/model/mobile_robot/tf</tf_topic>
+
         <max_linear_velocity>0.5</max_linear_velocity>
         <min_linear_velocity>-0.5</min_linear_velocity>
         <max_angular_velocity>1.0</max_angular_velocity>
