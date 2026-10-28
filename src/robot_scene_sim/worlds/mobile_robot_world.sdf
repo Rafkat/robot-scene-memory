@@ -114,6 +114,35 @@
             <diffuse>0.2 0.4 0.9 1</diffuse>
           </material>
         </visual>
+
+        <sensor name="gpu_lidar" type="gpu_lidar">
+          <pose>0 0 0.25 0 0 0</pose>
+
+          <topic>/scan</topic>
+          <gz_frame_id>lidar_link</gz_frame_id>
+
+          <update_rate>10</update_rate>
+          <always_on>true</always_on>
+          <visualize>true</visualize>
+
+          <lidar>
+            <scan>
+              <horizontal>
+                <samples>360</samples>
+                <resolution>1</resolution>
+                <min_angle>-3.14159265</min_angle>
+                <max_angle>3.14159265</max_angle>
+              </horizontal>
+            </scan>
+
+            <range>
+              <min>0.1</min>
+              <max>10.0</max>
+              <resolution>0.01</resolution>
+            </range>
+          </lidar>
+        </sensor>
+
       </link>
 
       <!-- Left wheel -->
