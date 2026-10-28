@@ -86,7 +86,7 @@ private:
 
     publish_centroids(clusters, scan);
     publish_bboxes(clusters, scan);
-    log_centroids_in_base_link(clusters, scan);
+    log_centroids_in_odom(clusters, scan);
 
     std::ostringstream output;
 
@@ -247,7 +247,7 @@ private:
     bbox_publisher_->publish(marker_array);
   }
 
-  void log_centroids_in_base_link(
+  void log_centroids_in_odom(
     const std::vector<robot_scene_sensors::Cluster> & clusters,
     const sensor_msgs::msg::LaserScan & scan
   ) {
@@ -257,10 +257,15 @@ private:
 
     try {
       const auto transform = tf_buffer_->lookupTransform(
-        "base_link",
+        "odom",
         scan.header.frame_id,
-        tf2::TimePointZero
+        rclcpp::Time(scan.header.stamp, RCL_ROS_TIME),
+        rclcpp::Duration::from_seconds(0.1)
       );
+
+      std::ostringstream log;
+
+      log << "Centroids in odom";
 
       for (std::size_t i = 0; i < clusters.size(); ++i) {
         const auto geometry = robot_scene_sensors::compute_cluster_geometry(
@@ -274,25 +279,28 @@ private:
         point_lidar.point.y = geometry.centroid.y;
         point_lidar.point.z = 0.0;
 
-        geometry_msgs::msg::PointStamped point_base;
+        geometry_msgs::msg::PointStamped point_odom;
 
         tf2::doTransform(
           point_lidar,
-          point_base,
+          point_odom,
           transform
         );
 
-        RCLCPP_INFO_THROTTLE(
-          get_logger(),
-          *get_clock(),
-          1000,
-          "Cluster %zu in base_link: (%.3f, %.3f, %.3f)",
-          i,
-          point_base.point.x,
-          point_base.point.y,
-          point_base.point.z
-        );
+        log << "\nCluster " << i
+        << ": ("
+        << point_odom.point.x << ", "
+        << point_odom.point.y << ", "
+        << point_odom.point.z << ")";
       }
+
+      RCLCPP_INFO_THROTTLE(
+        get_logger(),
+        *get_clock(),
+        1000,
+        "%s",
+        log.str().c_str()
+      );
     }
     catch (const tf2::TransformException & ex) {
       RCLCPP_WARN_THROTTLE(
