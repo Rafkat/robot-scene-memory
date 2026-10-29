@@ -271,7 +271,7 @@ private:
 
       log << "Centroids in odom";
 
-      visualisation_msgs::msg::MarkerArray marker_array;
+      visualization_msgs::msg::MarkerArray marker_array;
 
       for (std::size_t i = 0; i < clusters.size(); ++i) {
         const auto geometry = robot_scene_sensors::compute_cluster_geometry(
@@ -293,7 +293,7 @@ private:
           transform
         );
 
-        visalisation_msgs::msg::MarkerArray marker_array;
+        visalization_msgs::msg::MarkerArray marker_array;
 
         marker.header.frame_id = "odom";
         marker.header.stamp = scan.header.stamp;
@@ -301,8 +301,8 @@ private:
         marker.ns = "odom_centroids";
         marker.id = static_cast<int>(i);
 
-        marker.type = visualisation_msgs::msg::Marker::SPHERE;
-        marker.action = visualisation_msgs::msg::Marker::ADD;
+        marker.type = visualization_msgs::msg::Marker::SPHERE;
+        marker.action = visualization_msgs::msg::Marker::ADD;
 
         marker.pose.position = point_odom.point;
         marker.pose.orientation.w = 1.0;
