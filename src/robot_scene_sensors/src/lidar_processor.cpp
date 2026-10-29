@@ -293,7 +293,7 @@ private:
           transform
         );
 
-        visualization_msgs::msg::MarkerArray marker;
+        visualization_msgs::msg::Marker marker;
 
         marker.header.frame_id = "odom";
         marker.header.stamp = scan.header.stamp;
