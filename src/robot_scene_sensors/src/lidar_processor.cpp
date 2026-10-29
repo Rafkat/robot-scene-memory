@@ -54,6 +54,10 @@ public:
 
     tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
 
+    odom_centroids_pub_ = create_publisher<visualization_msgs::msg::MarkerArray>(
+      "/odom_centroids", 10
+      );
+
     RCLCPP_INFO(
             get_logger(),
             "Lidar processor started"
@@ -267,6 +271,8 @@ private:
 
       log << "Centroids in odom";
 
+      visualization_msgs::msg::MarkerArray marker_array;
+
       for (std::size_t i = 0; i < clusters.size(); ++i) {
         const auto geometry = robot_scene_sensors::compute_cluster_geometry(
           clusters[i]);
@@ -286,6 +292,32 @@ private:
           point_odom,
           transform
         );
+
+        visalisation_msgs::msg::MarkerArray marker_array;
+
+        marker.header.frame_id = 'odom';
+        marker.header.stamp = scan.header.stamp;
+
+        marker.ns = 'odom_centroids';
+        marker.id = static_cast<int>(i);
+
+        marker.type = visualisation_msgs::msg::Marker::SPHERE;
+        marker.action = visualization_msgs::msg::Marker::ADD;
+
+        marker.pose.position = point_odom.point;
+        marker.pose.orientation.w = 1.0;
+
+        marker.scale.x = 0.15;
+        marker.scale.y = 0.15;
+        marker.scale.z = 0.15;
+
+        marker.color.r = 0.1f;
+        marker.color.g = 0.8f;
+        marker.color.b = 0.3f;
+        marker.color.a = 1.0f;
+
+        marker.lifetime = rclcpp::Duration::from_seconds(0.5);
+        marker_array.markers.push_back(marker);
 
         log << "\nCluster " << i
         << ": ("
@@ -311,6 +343,9 @@ private:
         ex.what()
       );
     }
+
+    odom_centroids_pub_->publish(marker_array);
+
   }
 
   rclcpp::Subscription<
@@ -327,6 +362,10 @@ private:
 
   std::shared_ptr<tf2_ros::Buffer> tf_buffer_;
   std::shared_ptr<tf2_ros::TransformListener> tf_listener_;
+
+  rclcpp::Publisher<
+    visualization_msgs::msg::MarkerArray
+  >::SharedPtr odom_centroids_pub_;
 };
 
 int main(int argc, char ** argv)
