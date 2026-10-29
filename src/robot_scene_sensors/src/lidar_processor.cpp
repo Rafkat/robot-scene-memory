@@ -333,6 +333,8 @@ private:
         "%s",
         log.str().c_str()
       );
+
+      odom_centroids_pub_->publish(marker_array);
     }
     catch (const tf2::TransformException & ex) {
       RCLCPP_WARN_THROTTLE(
@@ -343,9 +345,6 @@ private:
         ex.what()
       );
     }
-
-    odom_centroids_pub_->publish(marker_array);
-
   }
 
   rclcpp::Subscription<
