@@ -18,7 +18,7 @@ def generate_launch_description():
             'gz', 'sim',
             '-s',
             '-r',
-            '--headless-rendering',
+            # '--headless-rendering',
             '-v', '4',
             str(world_file),
         ],
