@@ -27,7 +27,7 @@ namespace robot_scene_sensors {
     private:
         float max_match_distance_;
         std::size_t max_missed_frames_;
-        std::size_t netx_id_ = 0;
+        std::size_t next_id_ = 0;
 
         std::vector<TrackedCluster> tracks_;
     };
