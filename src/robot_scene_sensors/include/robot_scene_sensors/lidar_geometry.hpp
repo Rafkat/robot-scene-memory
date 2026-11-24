@@ -1,6 +1,3 @@
-#ifndef ROBOT_SCENE_MEMORY_LIDAR_GEOMETRY_H
-#define ROBOT_SCENE_MEMORY_LIDAR_GEOMETRY_H
-
 #pragma once
 
 #include <vector>
@@ -28,4 +25,3 @@ std::vector<Point2D> polar_to_cartesian(
 );
 
 }  // namespace robot_scene_sensors
-#endif //ROBOT_SCENE_MEMORY_LIDAR_GEOMETRY_H
