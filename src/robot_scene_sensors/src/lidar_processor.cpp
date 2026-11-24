@@ -56,7 +56,7 @@ public:
 
     odom_centroids_pub_ = create_publisher<visualization_msgs::msg::MarkerArray>(
       "/odom_centroids", 10
-      );
+    );
 
     RCLCPP_INFO(
             get_logger(),
@@ -159,7 +159,8 @@ private:
   void publish_centroids(
     const std::vector<robot_scene_sensors::Cluster> & clusters,
     const sensor_msgs::msg::LaserScan & scan
-  ) {
+  )
+  {
     visualization_msgs::msg::MarkerArray marker_array;
 
     for (std::size_t i = 0; i < clusters.size(); ++i) {
@@ -202,7 +203,8 @@ private:
   void publish_bboxes(
     const std::vector<robot_scene_sensors::Cluster> & clusters,
     const sensor_msgs::msg::LaserScan & scan
-  ) {
+  )
+  {
     visualization_msgs::msg::MarkerArray marker_array;
 
     constexpr double min_visual_size = 0.03;
@@ -254,7 +256,8 @@ private:
   void log_centroids_in_odom(
     const std::vector<robot_scene_sensors::Cluster> & clusters,
     const sensor_msgs::msg::LaserScan & scan
-  ) {
+  )
+  {
     if (clusters.empty()) {
       return;
     }
@@ -320,10 +323,10 @@ private:
         marker_array.markers.push_back(marker);
 
         log << "\nCluster " << i
-        << ": ("
-        << point_odom.point.x << ", "
-        << point_odom.point.y << ", "
-        << point_odom.point.z << ")";
+            << ": ("
+            << point_odom.point.x << ", "
+            << point_odom.point.y << ", "
+            << point_odom.point.z << ")";
       }
 
       RCLCPP_INFO_THROTTLE(
@@ -335,8 +338,7 @@ private:
       );
 
       odom_centroids_pub_->publish(marker_array);
-    }
-    catch (const tf2::TransformException & ex) {
+    } catch (const tf2::TransformException & ex) {
       RCLCPP_WARN_THROTTLE(
         get_logger(),
         *get_clock(),
@@ -352,8 +354,8 @@ private:
   >::SharedPtr subscription_;
 
   rclcpp::Publisher<
-      visualization_msgs::msg::MarkerArray
-    >::SharedPtr centroids_publisher_;
+    visualization_msgs::msg::MarkerArray
+  >::SharedPtr centroids_publisher_;
 
   rclcpp::Publisher<
     visualization_msgs::msg::MarkerArray

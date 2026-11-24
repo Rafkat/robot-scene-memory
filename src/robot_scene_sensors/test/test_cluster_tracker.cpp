@@ -14,8 +14,8 @@ TEST(ClusterTrackerTest, CreatesTracks)
     ClusterTracker tracker;
 
     tracker.update({
-      Point2D{2.5f, 0.0f},
-      Point2D{0.0f, 2.5f}
+    Point2D{2.5f, 0.0f},
+    Point2D{0.0f, 2.5f}
     });
 
     ASSERT_EQ(tracker.tracks().size(), 2u);
@@ -28,13 +28,13 @@ TEST(ClusterTrackerTest, PreservesIds)
     ClusterTracker tracker;
 
     tracker.update({
-      Point2D{2.5f, 0.0f},
-      Point2D{0.0f, 2.5f}
+    Point2D{2.5f, 0.0f},
+    Point2D{0.0f, 2.5f}
     });
 
     tracker.update({
-      Point2D{2.53f, 0.02f},
-      Point2D{0.01f, 2.48f}
+    Point2D{2.53f, 0.02f},
+    Point2D{0.01f, 2.48f}
     });
 
     ASSERT_EQ(tracker.tracks().size(), 2u);
