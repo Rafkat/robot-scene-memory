@@ -67,6 +67,7 @@ target_link_libraries(
         lidar_geometry
         lidar_clustering
         cluster_geometry
+        cluster_tracker
 )
 
 install(TARGETS sensor_node lidar_processor DESTINATION lib/${PROJECT_NAME})

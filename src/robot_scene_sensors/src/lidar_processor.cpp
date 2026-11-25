@@ -19,6 +19,7 @@
 #include "robot_scene_sensors/lidar_geometry.hpp"
 #include "robot_scene_sensors/lidar_clustering.hpp"
 #include "robot_scene_sensors/cluster_geometry.hpp"
+#include "robot_scene_sensors/cluster_tracker.hpp"
 
 using robot_scene_sensors::ScanGeometry;
 using robot_scene_sensors::polar_to_cartesian;
@@ -273,6 +274,9 @@ private:
 
       visualization_msgs::msg::MarkerArray marker_array;
 
+      std::vector<robot_scene_sensors::Point2D> observations;
+      observations.reserve(clusters.size());
+
       for (std::size_t i = 0; i < clusters.size(); ++i) {
         const auto geometry = robot_scene_sensors::compute_cluster_geometry(
           clusters[i]);
@@ -291,6 +295,11 @@ private:
           point_lidar,
           point_odom,
           transform
+        );
+
+        observations.push_back(
+          static_cast<float>(point_odom.point.x),
+          static_cast<float>(point_odom.point.y)
         );
 
         visualization_msgs::msg::Marker marker;
@@ -334,7 +343,17 @@ private:
         log.str().c_str()
       );
 
+      tracker_.update(observations);
       odom_centroids_pub_->publish(marker_array);
+
+      RCLCPP_INFO_THROTTLE(
+        get_logger(),
+        *get_clock(),
+        2000,
+        "Tracker: %zu active tracks",
+        tracker_.tracks().size()
+      );
+
     }
     catch (const tf2::TransformException & ex) {
       RCLCPP_WARN_THROTTLE(
@@ -365,6 +384,9 @@ private:
   rclcpp::Publisher<
     visualization_msgs::msg::MarkerArray
   >::SharedPtr odom_centroids_pub_;
+
+  robot_scene_sensors::ClusterTracker tracker_{0.5f, 5};
+
 };
 
 int main(int argc, char ** argv)
