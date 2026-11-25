@@ -59,6 +59,10 @@ public:
       "/odom_centroids", 10
     );
 
+    tracked_pub_ = create_publisher<visualization_msgs::msg::MarkerArray>(
+      "/tracked_clusters", 10
+    );
+
     RCLCPP_INFO(
             get_logger(),
             "Lidar processor started"
@@ -348,6 +352,67 @@ private:
       tracker_.update(observations);
       odom_centroids_pub_->publish(marker_array);
 
+      visualization_msgs::msg::MarkerArray tracked_markers;
+
+      for (const auto & track : tracker_.tracks()) {
+        visualization_msgs::msg::Marker marker;
+
+        marker.header.frame_id = "odom";
+        marker.header.stamp = scan.header.stamp;
+
+        marker.ns = "tracker_clusters";
+        marker.id = static_cast<int32_t>(track.id);
+
+        marker.type = visualization_msgs::msg::Marker::SPHERE;
+        marker.action = visualization_msgs::msg::Marker::ADD;
+
+        marker.pose.position.x = track.position.x;
+        marker.pose.position.y = track.position.y;
+        marker.pose.position.z = 0.15;
+        marker.pose.orientation.w = 1.0;
+
+        marker.scale.x = 0.20;
+        marker.scale.y = 0.20;
+        marker.scale.z = 0.20;
+
+        marker.color.r = 0.1f;
+        marker.color.g = 0.8f;
+        marker.color.b = 0.3f;
+        marker.color.a = 1.0f;
+
+        marker.lifetime = rclcpp::Duration::from_seconds(0.7);
+
+        tracked_markers.markers.push_back(marker);
+
+        visualization_msgs::msg::Marker label;
+
+        label.header = marker.header;
+        label.ns = "tracked_cluster_labels";
+        label.id = marker.id;
+
+        label.type = visualization_msgs::msg::Marker::TEXT_VIEW_FACING;
+        label.action = visualization_msgs::msg::Marker::ADD;
+
+        label.pose.position.x = track.position.x;
+        label.pose.position.y = track.position.y;
+        label.pose.position.z = 0.45;
+        label.pose.orientation.w = 1.0;
+
+        label.scale.z = 0.22;
+
+        label.color.r = 1.0f;
+        label.color.g = 1.0f;
+        label.color.b = 1.0f;
+        label.color.a = 1.0f;
+
+        label.text = "ID" + std::to_string(track.id);
+        label.lifetime = rclcpp::Duration::from_seconds(0.7);
+
+        tracked_markers.markers.push_back(label);
+      }
+
+      tracked_pub_->publish(tracked_markers);
+
       RCLCPP_INFO_THROTTLE(
         get_logger(),
         *get_clock(),
@@ -378,6 +443,10 @@ private:
   rclcpp::Publisher<
     visualization_msgs::msg::MarkerArray
   >::SharedPtr bbox_publisher_;
+
+  rclcpp::Publisher<
+    visualization_msgs::msg::MarkerArray
+  >::SharedPtr tracked_pub_;
 
   std::shared_ptr<tf2_ros::Buffer> tf_buffer_;
   std::shared_ptr<tf2_ros::TransformListener> tf_listener_;
