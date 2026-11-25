@@ -5,31 +5,32 @@
 
 #include "robot_scene_sensors/lidar_geometry.hpp"
 
-namespace robot_scene_sensors {
+namespace robot_scene_sensors
+{
 
-    struct TrackedCluster {
-        std::size_t id;
-        Point2D position;
-        std::size_t observations;
-        std::size_t missed_frames;
-    };
+struct TrackedCluster
+{
+  std::size_t id;
+  Point2D position;
+  std::size_t observations;
+  std::size_t missed_frames;
+};
 
-    class ClusterTracker {
-    public:
-        explicit ClusterTracker(
-            float max_match_distance = 0.5f,
-            std::size_t max_missed_frames = 5);
+class ClusterTracker {
+public:
+  explicit ClusterTracker(
+    float max_match_distance = 0.5f,
+    std::size_t max_missed_frames = 5);
 
-        void update(const std::vector<Point2D> & observations);
+  void update(const std::vector<Point2D> & observations);
 
-        const std::vector<TrackedCluster> & tracks() const;
+  const std::vector<TrackedCluster> & tracks() const;
 
-    private:
-        float max_match_distance_;
-        std::size_t max_missed_frames_;
-        std::size_t next_id_ = 0;
+private:
+  float max_match_distance_;
+  std::size_t max_missed_frames_;
+  std::size_t next_id_ = 0;
 
-        std::vector<TrackedCluster> tracks_;
-    };
+  std::vector<TrackedCluster> tracks_;
+};
 }
-
