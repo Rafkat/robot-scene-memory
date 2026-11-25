@@ -299,10 +299,10 @@ private:
           transform
         );
 
-        observations.push_back(
+        observations.push_back({
           static_cast<float>(point_odom.point.x),
           static_cast<float>(point_odom.point.y)
-        );
+        });
 
         visualization_msgs::msg::Marker marker;
 
