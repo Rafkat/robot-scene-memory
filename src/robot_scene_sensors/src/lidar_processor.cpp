@@ -349,7 +349,7 @@ private:
       RCLCPP_INFO_THROTTLE(
         get_logger(),
         *get_clock(),
-        2000,
+        1000,
         "Tracker: %zu active tracks",
         tracker_.tracks().size()
       );
