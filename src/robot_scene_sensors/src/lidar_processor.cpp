@@ -277,6 +277,7 @@ private:
 
       visualization_msgs::msg::MarkerArray marker_array;
       std::vector<robot_scene_sensors::Point2D> observations;
+      observations.reserve(clusters.size());
 
       for (std::size_t i = 0; i < clusters.size(); ++i) {
         const auto geometry = robot_scene_sensors::compute_cluster_geometry(
